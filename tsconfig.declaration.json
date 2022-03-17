@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "emitDeclarationOnly": true,
+        "isolatedModules": false,
+        "declaration": true,
+        "declarationMap": true,
+        "noEmit": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "src/stories/*.tsx",
+        "src/__tests__/*.test.tsx"
+    ]
+}
