@@ -1,3 +1,4 @@
+![recompo logo](https://raw.githubusercontent.com/recompo/recompo/main/images/logo.png)
 # recompo
 # About
 Recompo is a free, open-source project that is designed for customizability and speed and is easy to use and powerful 
