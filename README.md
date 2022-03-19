@@ -6,7 +6,7 @@ Recompo is a free and open-source project that is designed for customizability a
 ## Installation
 recompo is available on [npm](https://npmjs.com) and currently is on beta
 
-```
+```bash
 // using npm
 npm install recompo
 
