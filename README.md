@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/recompo/recompo/main/images/banner-dark.png" alt="recompo logo" width="820vw" height="312vh" />
+<center><img src="https://raw.githubusercontent.com/recompo/recompo/main/images/banner-dark.png" alt="recompo logo" width="820vw" height="312vh" /></center>
 <h1 align="center">recompo</h1>
 
 ## About
