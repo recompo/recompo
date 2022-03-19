@@ -6,24 +6,26 @@ Recompo is a free and open-source project that is designed for customizability a
 ## Installation
 recompo is available on [npm](https://npmjs.com) and currently is on beta
 
-```
-// using npm
+```bash
+# using npm
 npm install recompo
 
-// using yarn
+# using yarn
 yarn add recompo
 ```
 ## Usage
 
 An example on how to use
 
-```ts
+```js
 import Text from 'recompo/text';
+
 const App = () => {
     <Text>
         Hello world
     </Text>
 }
+
 export default App
 ```
 
