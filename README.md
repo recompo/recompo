@@ -1,7 +1,7 @@
 ![recompo logo](https://raw.githubusercontent.com/recompo/recompo/main/images/banner-dark.png)
 
 ## About
-Recompo is a free, open-source project that is designed for customizability and speed and is easy to use and powerful 
+Recompo is a free and open-source project that is designed for customizability and speed and is easy to use and powerful 
 
 ## Installation
 recompo is available on [npm](https://npmjs.com) and currently is on beta
