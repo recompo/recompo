@@ -2,3 +2,4 @@ node_modules/
 dist/
 .dccache
 target
+yarn-error*.log
