@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "declaration": true,
-        "declarationDir": "build",
         "module": "esnext",
         "target": "es5",
         "lib": [
@@ -13,15 +12,17 @@
         "jsx": "react",
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "outDir": "dist"
     },
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "css.d.ts"
     ],
     "exclude": [
         "node_modules",
         "build",
-        "src/stories/*.tsx",
-        "src/__tests__/*.test.tsx"
-    ]
+        "src/stories/**/*.tsx",
+        "src/__tests__/**/*.test.tsx"
+    ],
 }
