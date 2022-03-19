@@ -17,13 +17,15 @@ yarn add recompo
 
 An example on how to use
 
-```ts
+```js
 import Text from 'recompo/text';
+
 const App = () => {
     <Text>
         Hello world
     </Text>
 }
+
 export default App
 ```
 
