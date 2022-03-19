@@ -29,12 +29,12 @@ export default App
 ---
 
 # Authors
-[@Markos-Th09](https://github.com/Markos-Th09)
+- [@Markos-Th09](https://github.com/Markos-Th09)
 
-[@ibraim6](https://github.com/ibraim6)
+- [@ibraim6](https://github.com/ibraim6)
 
-[@PhantomKnight287](https://github.com/PhantomKnight287)
+- [@PhantomKnight287](https://github.com/PhantomKnight287)
 
-[@LilStar068](https://github.com/LilStar068)
+- [@LilStar068](https://github.com/LilStar068)
 
-[@Sengolda](https://github.com/Sengolda)
+- [@Sengolda](https://github.com/Sengolda)
