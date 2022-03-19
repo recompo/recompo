@@ -1,5 +1,4 @@
-<img src="https://raw.githubusercontent.com/recompo/recompo/main/images/banner-dark.png" alt="recompo logo" width="auto" height="250vh" align="center" />
-<h1 align="center">recompo</h1>
+![recompo logo](https://raw.githubusercontent.com/recompo/recompo/main/images/banner-dark.png)
 
 ## About
 Recompo is a free, open-source project that is designed for customizability and speed and is easy to use and powerful 
