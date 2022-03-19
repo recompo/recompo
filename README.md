@@ -1,9 +1,10 @@
 ![recompo logo](https://raw.githubusercontent.com/recompo/recompo/main/images/logo.png)
-# recompo
-# About
+<h1 style="text-align: center">recompo</h1>
+
+## About
 Recompo is a free, open-source project that is designed for customizability and speed and is easy to use and powerful 
 
-# Installation
+## Installation
 recompo is available on [npm](https://npmjs.com) and currently is on beta
 
 ```
@@ -13,7 +14,7 @@ npm install recompo
 // using yarn
 yarn add recompo
 ```
-# Usage
+## Usage
 
 An example on how to use
 
