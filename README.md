@@ -1,4 +1,4 @@
-![recompo logo](https://raw.githubusercontent.com/recompo/recompo/main/images/logo.png)
+![recompo logo](https://raw.githubusercontent.com/recompo/recompo/main/images/banner-dark.png)
 <h1 align="center">recompo</h1>
 
 ## About
