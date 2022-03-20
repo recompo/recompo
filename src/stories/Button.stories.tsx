@@ -19,6 +19,13 @@ export const ButtonError = Template.bind({});
 export const ButtonInfo = Template.bind({});
 export const ButtonWarning = Template.bind({});
 export const ButtonDisabled = Template.bind({});
+export const ButtonOutlinePrimary = Template.bind({});
+export const ButtonOutlineSecondary = Template.bind({});
+export const ButtonOutlineSuccess = Template.bind({});
+export const ButtonOutlineError = Template.bind({});
+export const ButtonOutlineInfo = Template.bind({});
+export const ButtonOutlineWarning = Template.bind({});
+export const ButtonOutlineDisabled = Template.bind({});
 
 
 ButtonPrimary.args = {
@@ -52,6 +59,48 @@ ButtonWarning.args = {
 };
 
 ButtonDisabled.args = {
+  color: "primary",
+  children: "Hello World",
+  disabled: true,
+}
+
+ButtonOutlinePrimary.args = {
+  color: "primary",
+  children: "Hello World",
+  outline: true,
+};
+
+ButtonOutlineSecondary.args = {
+  color: "secondary",
+  children: "Hello World",
+  outline: true,
+};
+
+ButtonOutlineSuccess.args = {
+  color: "success",
+  children: "Hello World",
+  outline: true,
+};
+
+ButtonOutlineError.args = {
+  color: "error",
+  children: "Hello World",
+  outline: true,
+};
+
+ButtonOutlineInfo.args = {
+  color: "info",
+  children: "Hello World",
+  outline: true,
+};
+
+ButtonOutlineWarning.args = {
+  color: "warning",
+  children: "Hello World",
+  outline: true,
+};
+
+ButtonOutlineDisabled.args = {
   color: "primary",
   children: "Hello World",
   disabled: true,
