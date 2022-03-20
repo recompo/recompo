@@ -11,9 +11,40 @@ export default {
   component: Button,
 } as ComponentMeta<typeof Button>;
 
-export const ButtonComponent = Template.bind({});
+export const ButtonPrimary = Template.bind({});
+export const ButtonSecondary = Template.bind({});
+export const ButtonSuccess = Template.bind({});
+export const ButtonError = Template.bind({});
+export const ButtonInfo = Template.bind({});
+export const ButtonWarning = Template.bind({});
 
-ButtonComponent.args = {
+
+ButtonPrimary.args = {
   color: "primary",
+  children: "Hello World",
+};
+
+ButtonSecondary.args = {
+  color: "secondary",
+  children: "Hello World",
+};
+
+ButtonSuccess.args = {
+  color: "success",
+  children: "Hello World",
+};
+
+ButtonError.args = {
+  color: "error",
+  children: "Hello World",
+};
+
+ButtonInfo.args = {
+  color: "info",
+  children: "Hello World",
+};
+
+ButtonWarning.args = {
+  color: "warning",
   children: "Hello World",
 };
