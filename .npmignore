@@ -2,9 +2,10 @@ src/
 images/
 .storybook/
 css.d.ts
-jest.config.js
+*.config.js
 README.md
-rollup.config.js
 tsconfig*.json
 .gitignore
 .git/
+scripts/
+images/

@@ -14,7 +14,16 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "outDir": "dist",
-        "emitDeclarationOnly": true
+        "emitDeclarationOnly": true,
+        "baseUrl": "src",
+        "paths": {
+            "theme/*": [
+                "theme/*"
+            ],
+            "components/*": [
+                "components/*"
+            ]
+        }
     },
     "include": [
         "src/**/*",

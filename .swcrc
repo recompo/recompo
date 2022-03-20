@@ -1,9 +1,19 @@
 {
+    "$schema": "https://json.schemastore.org/swcrc.json",
     "jsc": {
         "parser": {
             "syntax": "typescript",
             "tsx": true
         },
-        "target": "es5"
+        "target": "es5",
+        "baseUrl": "src",
+        "paths": {
+            "theme/*": [
+                "theme/*"
+            ],
+            "components/*": [
+                "components/*"
+            ]
+        }
     }
 }
