@@ -8,6 +8,7 @@ interface ITheme {
   slColor: string;
   btnHoverBg: string;
   btnHoverColor: string;
+  fontWeight: number
 }
 
 export type Theme = Partial<ITheme>;
