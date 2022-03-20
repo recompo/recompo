@@ -39,9 +39,10 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({ background, color, accent,
             data-accent={accentcolor}
             data-links={links_}
             data-position={pos}
+            style={{ background }}
         >
             {logo ? <a href={logo.url} className={styles.logo}>{logo.name}</a> : <div></div>}
-            <ul className={styles.links}>
+            {links ? <ul className={styles.links}>
                 {links.map((link: NavLink) => {
                     links_ = links_ + 1
                     return (
@@ -50,13 +51,16 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({ background, color, accent,
                         </li>
                     )
                 })}
-            </ul>
-            <img 
-                src={menu ? "/images/nav-close.svg" : "/images/nav-bars.svg"} 
-                alt={menu ? "Close" : "Menu"} 
-                className="toggle" 
-                onClick={toggleMenu} 
-            />
+            </ul> : null}
+            <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
+                <img 
+                    src={menu ? "/images/nav-close.svg" : "/images/nav-bars.svg"} 
+                    alt={menu ? "Close" : "Menu"} 
+                    className="toggle" 
+                    onClick={toggleMenu}
+                    style={{ textAlign: 'right' }}
+                />
+            </div>
             {children}
         </nav>
     )

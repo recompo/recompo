@@ -15,7 +15,8 @@ export default {
 export const NavbarStory = Template.bind({});
 
 NavbarStory.args = {
-  background: 'gray',
-  color: 'tomato',
+  background: 'tomato',
+  color: 'white',
   accent: 'black',
+  links: [{name: 'test', url: 'https://google.com'},{name: 'test', url: 'https://google.com'},{name: 'test', url: 'https://google.com'}]
 }
