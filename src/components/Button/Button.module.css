@@ -3,6 +3,7 @@
   padding: 0.375rem 0.75rem;
   border-radius: 4px;
   color: white;
+  cursor: pointer;
 }
 .Recompo_Button:hover {
   opacity: 0.8;
@@ -30,4 +31,5 @@
 
 .Recompo_Button:disabled {
   opacity: 0.8;
+  cursor: default;
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Button from "../components/Button";
-import ButtonGroup from "../components/ButtonGroup";
+// import ButtonGroup from "../components/ButtonGroup";
+import { ButtonGroup } from "../";
 
 export default {
   title: 'ButtonGroup',

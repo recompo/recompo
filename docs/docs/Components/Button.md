@@ -9,11 +9,14 @@ A Button Component with different variants
 ### Available Props
 
 - color: `primary`,`success`,`error`,`info`,`warning`,`inherit`,`secondary`
+- disabled: If set to `true` button will be disabled. Defaults `false`
 
 ### Usage
 
 ```js
-import { Button } from "recompo/components";
+import { Button } from "recompo";
+// OR
+import Button "recompo/components/Button";
 
 const App = () => {
   return (

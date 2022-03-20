@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "../components/Button";
+// import Button from "../components/Button";
+import { Button } from "../"
 
 const Template: ComponentStory<typeof Button> = ({ children, ...args }) => (
   <Button {...args}>{children}</Button>

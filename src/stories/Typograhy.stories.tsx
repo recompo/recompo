@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Typography from "../components/Typography";
+// import Typography from "../components/Typography";
+import { Typography } from "../";
 
 const Template: ComponentStory<typeof Typography> = ({ children, ...args }) => (
   <Typography {...args}>{children}</Typography>

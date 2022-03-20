@@ -14,7 +14,6 @@ export type ButtonProps = {
 };
 
 const Button: FC<PropsWithChildren<ButtonProps>> = ({ children, color, disabled }) => {
-  console.log(disabled)
   if (disabled) {
     return <button
       disabled

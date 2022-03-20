@@ -9,7 +9,9 @@ Container Component can be used to Center the content in your page both horizont
 ### Usage
 
 ```jsx
-import { Container } from "recompo/components";
+import { Container } from "recompo";
+// OR
+import Container from "recompo/components/Container";
 
 const App = () => {
   return (

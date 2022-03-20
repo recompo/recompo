@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Input from "../components/Input";
+// import Input from "../components/Input";
+import { Input } from "../";
 
 const Template: ComponentStory<typeof Input> = ({ children, ...args }) => (
   <Input {...args}>{children}</Input>

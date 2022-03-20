@@ -13,12 +13,14 @@ Typography is an important features for a website, our typography component is v
   - &rarr; variant: `h1`,`h2`,`h3`,`h4`,`h5`,`h6`,`p`
   - &rarr; align(Text Align)
   - &rarr; font
-  - &rarr; fontWeight: `100` `200` `300` `400` `500` `600` `700` `800` `900- `
+  - &rarr; fontWeight: `100` `200` `300` `400` `500` `600` `700` `800` `900`
 
 ### Usage
 
 ```js
 import { Typography } from "recompo";
+// OR
+import Typography from "recompo/components/Typography";
 
 return (
   <>
