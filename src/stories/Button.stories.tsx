@@ -2,8 +2,8 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Button from "../components/Button";
 
-const Template: ComponentStory<typeof Button> = ({ children, color }) => (
-  <Button color={color}>{children}</Button>
+const Template: ComponentStory<typeof Button> = ({ children, ...args }) => (
+  <Button {...args}>{children}</Button>
 );
 
 export default {
@@ -17,6 +17,7 @@ export const ButtonSuccess = Template.bind({});
 export const ButtonError = Template.bind({});
 export const ButtonInfo = Template.bind({});
 export const ButtonWarning = Template.bind({});
+export const ButtonDisabled = Template.bind({});
 
 
 ButtonPrimary.args = {
@@ -48,3 +49,9 @@ ButtonWarning.args = {
   color: "warning",
   children: "Hello World",
 };
+
+ButtonDisabled.args = {
+  color: "primary",
+  children: "Hello World",
+  disabled: true,
+}

@@ -27,3 +27,7 @@
   background-color: #ffc107;
   color: black;
 }
+
+.Recompo_Button:disabled {
+  opacity: 0.8;
+}

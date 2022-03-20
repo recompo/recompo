@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren } from "react";
+  import React, { FC, PropsWithChildren } from "react";
 import styles from "./Button.module.css";
 
 export type ButtonProps = {
@@ -10,18 +10,30 @@ export type ButtonProps = {
     | "warning"
     | "inherit"
     | "secondary";
+  disabled?: boolean;
 };
 
-const Button: FC<PropsWithChildren<ButtonProps>> = ({ children, color }) => {
-  return (
-    <button
+const Button: FC<PropsWithChildren<ButtonProps>> = ({ children, color, disabled }) => {
+  console.log(disabled)
+  if (disabled) {
+    return <button
+      disabled
       className={`${styles.Recompo_Button} ${
         styles[`Recompo_Button-${color}`]
       }`}
     >
       {children}
     </button>
-  );
+  }
+  else {
+    return <button
+      className={`${styles.Recompo_Button} ${
+        styles[`Recompo_Button-${color}`]
+      }`}
+    >
+      {children}
+    </button>
+  }
 };
 
 export default Button;
