@@ -18,12 +18,12 @@ yarn add recompo
 An example on how to use
 
 ```js
-import Text from 'recompo/text';
+import { Typography } from "recompo";
 
 const App = () => {
-    <Text>
+    <Typography>
         Hello world
-    </Text>
+    </Typography>
 }
 
 export default App
