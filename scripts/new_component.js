@@ -16,7 +16,7 @@ const ${name} = () => {
 
 export default ${name}
 `;
-const dir = `src/components/${name}`;
+const dir = `./src/components/${name}`;
 
 fs.mkdirSync(`${dir}`);
 fs.writeFileSync(`${dir}/${name}.tsx`, component);
@@ -43,4 +43,4 @@ export const Variant = Template.bind({});
 Variant.args = {
 };
 `;
-fs.writeFileSync(`src/stories/${name}.stories.tsx`, story);
+fs.writeFileSync(`./src/stories/${name}.stories.tsx`, story);
