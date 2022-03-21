@@ -9,7 +9,7 @@ import React, { FC, PropsWithChildren } from 'react';
 import styles from './${name}.module.css'
 
 
-const $1 = () => {
+const ${name} = () => {
   return <div></div>
 }
 
