@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const fs = require("fs");
-const name = name;
+const name = process.argv[1];
 
 const index = `export { default } from './${name}'`;
 
