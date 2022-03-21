@@ -1,7 +1,9 @@
 const path = require("path");
 const glob = require("glob");
 
-/** @type {import('webpack').Configuration} */
+/**
+ * @param {{config:import('webpack').Configuration,mode:String}} config
+ */
 module.exports = async ({ config, mode }) => {
   config.module.rules.push({
     test: /\.ts[x]?$/,
@@ -20,7 +22,7 @@ module.exports = async ({ config, mode }) => {
       "style-loader",
       {
         loader: "css-loader",
-        options: { modules: true, exportOnlyLocals: false }
+        options: { modules: true, importLoaders: 1 }
       },
       "postcss-loader",
       "sass-loader"
@@ -28,8 +30,13 @@ module.exports = async ({ config, mode }) => {
   });
   config.module.rules.push({
     test: /\.s[ac]ss$/i,
-    exclude: /node_modules/,
-    use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"]
+    exclude: /\.module\.s[ac]ss$/,
+    use: [
+      "style-loader",
+      { loader: "css-loader", options: { modules: true, importLoaders: 1 } },
+      "postcss-loader",
+      "sass-loader"
+    ]
   });
   return config;
 };

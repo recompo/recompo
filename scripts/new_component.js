@@ -45,6 +45,7 @@ export const Variant = Template.bind({});
 Variant.args = {
 };
 `;
+<<<<<<< HEAD
 
 fs.writeFileSync(`${rootPath}/src/stories/${name}.stories.tsx`, story);
 fs.writeFileSync(
@@ -52,3 +53,6 @@ fs.writeFileSync(
   `export { default as ${name}} from "./${name}"`,
   { mode: "append" }
 );
+=======
+fs.writeFileSync(`./src/stories/${name}.stories.tsx`, story);
+>>>>>>> 4d160fa58552006bd7e27d2d973ad84987389e87

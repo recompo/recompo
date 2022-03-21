@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import styles from "./Input.module.css";
+import styles from "./Input.module.scss";
 export type InputProps = {
   label?: string;
   disabled?: boolean;
@@ -17,7 +17,7 @@ const Input: FC<InputProps> = ({
   placeHolder,
   value,
   borderRadius,
-  name,
+  name
 }) => {
   if (label) {
     return (

@@ -1,5 +1,5 @@
 import React, { FC, PropsWithChildren, useState } from "react";
-import styles from "./Navbar.module.css";
+import styles from "./Navbar.module.scss";
 import { Property } from "csstype";
 
 interface NavLink {
@@ -41,7 +41,7 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
   const navStyles = {
     display: "flex",
     justifyContent: "center",
-    boxSizing: "borderBox",
+    boxSizing: "border-box",
     alignItems: "center",
     textAlign: "center",
     padding: "20px",
