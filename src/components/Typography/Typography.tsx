@@ -8,7 +8,7 @@ export interface TypographyProps {
   variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
   align?: Property.TextAlign;
   font?: string;
-  fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+  fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
 }
 
 const Typography: FC<PropsWithChildren<TypographyProps>> = ({
@@ -19,13 +19,13 @@ const Typography: FC<PropsWithChildren<TypographyProps>> = ({
   font,
   fontWeight
 }) => {
-  const { textColor, font: themeFont, fontWeight: weight } = useTheme();
+  // const { textColor, font: themeFont, fontWeight: weight } = useTheme();
   const textProps = {
     style: {
       textAlign: align,
-      color: textColor ?? color,
-      fontFamily: themeFont || font,
-      fontWeight: weight || fontWeight
+      color: /*textColor ??*/ color,
+      fontFamily: /*themeFont ??*/ font,
+      fontWeight: /*weight ??*/ fontWeight
     }
   };
   if (variant === "h1") return <h1 {...textProps}>{children}</h1>;

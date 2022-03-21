@@ -8,7 +8,7 @@ interface ITheme {
   slColor: string;
   btnHoverBg: string;
   btnHoverColor: string;
-  fontWeight: number
+  fontWeight: number;
 }
 
 export type Theme = Partial<ITheme>;
@@ -21,4 +21,6 @@ export const ThemeProvider: FC<{ theme: Theme }> = ({ theme, children }) => {
   );
 };
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => {
+  return useContext(ThemeContext);
+};

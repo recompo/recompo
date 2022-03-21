@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # Intro 
-![recompo logo](https://raw.githubusercontent.com/recompo/recompo/main/images/banner-dark.png)
+![recompo logo](https://raw.githubusercontent.com/recompo/recompo/main/public/images/banner-dark.png)
 
 ## About
 Recompo is a free and open-source project that is designed for customizability and speed and is easy to use and powerful 
