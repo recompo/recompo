@@ -22,3 +22,25 @@ fs.mkdirSync(`${dir}`);
 fs.writeFileSync(`${dir}/${name}.tsx`, component);
 fs.writeFileSync(`${dir}/index.ts`, index);
 fs.writeFileSync(`${dir}/${name}.module.css`, "");
+
+const story = `
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+// import ${name} from "../components/${name}";
+import { ${name} } from "../";
+
+const Template: ComponentStory<typeof ${name}> = ({ children, ...args }) => (
+  <${name} {...args}>{children}</${name}>
+);
+
+export default {
+  title: "${name}",
+  component: ${name}
+} as ComponentMeta<typeof ${name}>;
+
+export const Variant = Template.bind({});
+
+Variant.args = {
+};
+`;
+fs.writeFileSync(`src/stories/${name}.stories.tsx`, story);
