@@ -6,7 +6,7 @@
     text-align: center;
     padding: 20px;
     height: 80px;
-    background: attr(data-background);
+    background-color: attr(data-background);
     color: attr(data-color);
     width: 100%;
 }
@@ -42,6 +42,10 @@
 
 .navbar .toggle {
     display: none;
+}
+
+.navbar img {
+    justify-content: flex-end;
 }
 
 @media (max-wdith: calc((attr(data-links)*15px)+700px)) {

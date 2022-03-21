@@ -47,9 +47,15 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({ background, color, accent,
     return (
         <nav
             className={styles.navbar}
+            data-background={background}
+            data-color={color}
+            data-accent={accentcolor}
+            data-links={links_}
+            data-position={pos}
+            style={{ background }}
         >
             {logo ? <a href={logo.url} className={styles.logo}>{logo.name}</a> : <div></div>}
-            <ul className={styles.links}>
+            {links ? <ul className={styles.links}>
                 {links.map((link: NavLink) => {
                     return (
                         <li className={styles.link} onClick={closeMenu}>
@@ -57,13 +63,16 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({ background, color, accent,
                         </li>
                     )
                 })}
-            </ul>
-            <img 
-                src={menu ? "/images/nav-close.svg" : "/images/nav-bars.svg"} 
-                alt={menu ? "Close" : "Menu"} 
-                className="toggle" 
-                onClick={toggleMenu} 
-            />
+            </ul> : null}
+            <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
+                <img 
+                    src={menu ? "/images/nav-close.svg" : "/images/nav-bars.svg"} 
+                    alt={menu ? "Close" : "Menu"} 
+                    className="toggle" 
+                    onClick={toggleMenu}
+                    style={{ textAlign: 'right' }}
+                />
+            </div>
             {children}
         </nav>
     )
