@@ -31,6 +31,19 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({ background, color, accent,
     const accentcolor = accent ? accent : color
     const pos = position ? position : "relative"
 
+    const navStyles = {
+        display: 'flex',
+        justifyContent: 'center',
+        boxSizing: 'borderBox',
+        alignItems: 'center',
+        textAlign: 'center',
+        padding: '20px',
+        height: '80px',
+        background: background,
+        color: color,
+        width: '100%',
+    }
+
     return (
         <nav
             className={styles.navbar}
@@ -44,7 +57,6 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({ background, color, accent,
             {logo ? <a href={logo.url} className={styles.logo}>{logo.name}</a> : <div></div>}
             {links ? <ul className={styles.links}>
                 {links.map((link: NavLink) => {
-                    links_ = links_ + 1
                     return (
                         <li className={styles.link} onClick={closeMenu}>
                             <a href={link.url}>{link.name}</a>
