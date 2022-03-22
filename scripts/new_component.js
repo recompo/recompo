@@ -52,3 +52,4 @@ fs.writeFileSync(
   `export { default as ${name}} from "./${name}"`,
   { mode: "append" }
 )
+console.log(`Created component ${name}`)
