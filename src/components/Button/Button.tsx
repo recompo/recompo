@@ -1,8 +1,8 @@
-  import React, { FC, PropsWithChildren } from "react";
-import styles from "./Button.module.css";
+import React, { FC, PropsWithChildren } from "react";
+import styles from "./Button.module.scss";
 
 export type ButtonProps = {
-  color?:
+  variant?:
     | "primary"
     | "success"
     | "error"
@@ -14,22 +14,25 @@ export type ButtonProps = {
   outline?: boolean;
 };
 
-const Button: FC<PropsWithChildren<ButtonProps>> = ({ children, color, disabled, outline }) => {
-  const cls = outline ? styles[`Recompo_Button-outline-${color}`] : styles[`Recompo_Button-${color}`]
+const Button: FC<PropsWithChildren<ButtonProps>> = ({
+  children,
+  variant,
+  disabled,
+  outline
+}) => {
+  const cls = outline
+    ? styles[`Recompo_Button-outline-${variant}`]
+    : styles[`Recompo_Button-${variant}`];
   if (disabled) {
-    return <button
-      disabled
-      className={`${styles.Recompo_Button} ${cls}`}
-    >
-      {children}
-    </button>
-  }
-  else {
-    return <button
-      className={`${styles.Recompo_Button} ${cls}`}
-    >
-      {children}
-    </button>
+    return (
+      <button disabled className={`${styles.Recompo_Button} ${cls}`}>
+        {children}
+      </button>
+    );
+  } else {
+    return (
+      <button className={`${styles.Recompo_Button} ${cls}`}>{children}</button>
+    );
   }
 };
 

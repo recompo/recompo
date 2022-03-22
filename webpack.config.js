@@ -1,8 +1,10 @@
 const path = require("path");
 const glob = require("glob");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
+  plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
@@ -11,30 +13,41 @@ module.exports = {
         use: ["swc-loader"]
       },
       {
-        test: /\.module.s[ac]ss$/i,
-        exclude: /node_modules/,
+        test: /\.module.css$/i,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: { modules: true, exportOnlyLocals: false }
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
           },
-          "postcss-loader",
-          "sass-loader"
+          "postcss-loader"
         ]
       },
       {
-        test: /\.s[ac]ss$/i,
-        exclude: /node_modules/,
-        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"]
+        test: /\.css$/i,
+        exclude: /\.module\.css/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
+          },
+          "postcss-loader"
+        ]
       }
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".jsx", ".scss"]
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".css"]
   },
   entry: glob
-    .sync("./src/[!stories,__tests__]**/*.{ts,tsx}")
+    .sync("./src/**/*[!.test,.stories].{ts,tsx}")
     .reduce((acc, file) => {
       const name = file
         .replace(/^\.\/src\//, "")
@@ -47,8 +60,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].js",
-    sourceMapFilename: "[name].js.map"
+    sourceMapFilename: "[name].js.map",
+    library: "recompo"
   },
-  plugins: [],
-  externals: ["react"]
+  externals: { React: "react", ReactDOM: "react-dom" }
 };

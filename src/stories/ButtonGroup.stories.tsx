@@ -18,9 +18,9 @@ export const ButtonGroupStory = Template.bind({})
 ButtonGroupStory.args = {
     children: (
       <>
-        <Button color="primary">First</Button>
-        <Button color="primary">Middle</Button>
-        <Button color="primary">Last</Button>
+        <Button variant="primary">primary</Button>
+        <Button variant="secondary">secondary</Button>
+        <Button variant="success">success</Button>
       </>
     ),
     gap: '0.5rem'

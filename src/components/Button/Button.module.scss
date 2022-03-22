@@ -4,74 +4,74 @@
   border-radius: 4px;
   color: white;
   cursor: pointer;
-}
-.Recompo_Button:hover {
+
+&:hover {
   opacity: 0.8;
 }
-.Recompo_Button-primary {
+&-primary {
   background-color: #0d6efd;
 }
 
-.Recompo_Button-outline-primary {
+&-outline-primary {
   color: #0d6efd;
   border: 1px solid #0d6efd;
   background-color: transparent;
 }
 
-.Recompo_Button-secondary {
+&-secondary {
   background-color: #6c757d;
 }
 
-.Recompo_Button-outline-secondary {
+&-outline-secondary {
   color: #6c757d;
   border: 1px solid #6c757d;
   background-color: transparent;
 }
 
-.Recompo_Button-success {
+&-success {
   background-color: #198754;
 }
 
-.Recompo_Button-outline-success {
+&-outline-success {
   color: #198754;
   border: 1px solid #198754;
   background-color: transparent;
 }
 
-
-.Recompo_Button-error {
+&-error {
   background-color: #dc3545;
 }
 
-.Recompo_Button-outline-error {
+&-outline-error {
   color: #dc3545;
   border: 1px solid #dc3545;
   background-color: transparent;
 }
 
-.Recompo_Button-info {
+&-info {
   background-color: #0dcaf0;
   color: black;
 }
 
-.Recompo_Button-outline-info {
+&-outline-info {
   color: #0dcaf0;
   border: 1px solid #0dcaf0;
   background-color: transparent;
 }
 
-.Recompo_Button-warning {
+&-warning {
   background-color: #ffc107;
   color: black;
 }
 
-.Recompo_Button-outline-warning {
+&-outline-warning {
   color: #ffc107;
-  border: 1px solid #ffc107;;
+  border: 1px solid #ffc107;
   background-color: transparent;
 }
 
-.Recompo_Button:disabled {
+&:disabled {
   opacity: 0.8;
   cursor: default;
+}
 }

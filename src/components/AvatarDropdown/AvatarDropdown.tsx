@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import styles from './AvatarDropdown.module.css'
+import styles from './AvatarDropdown.module.scss'
 
 type DropdownItem = {
 	image: string;

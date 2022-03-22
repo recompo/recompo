@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 const fs = require("fs");
+const path = require("path");
 
 const name = process.argv[0].match("node") ? process.argv[2] : process.argv[1];
 
-const index = `export { default } from './${name}'`;
+const rootPath = path.join(__dirname, "../");
 
+const index = `export { default } from './${name}'`;
 const component = `
 import React, { FC } from 'react';
 import styles from './${name}.module.css'
@@ -16,7 +18,7 @@ const ${name} = () => {
 
 export default ${name}
 `;
-const dir = `src/components/${name}`;
+const dir = `${rootPath}/src/components/${name}`;
 
 fs.mkdirSync(`${dir}`);
 fs.writeFileSync(`${dir}/${name}.tsx`, component);
@@ -43,4 +45,14 @@ export const Variant = Template.bind({});
 Variant.args = {
 };
 `;
-fs.writeFileSync(`src/stories/${name}.stories.tsx`, story);
+<<<<<<< HEAD
+
+fs.writeFileSync(`${rootPath}/src/stories/${name}.stories.tsx`, story);
+fs.writeFileSync(
+  `src/components/index.ts`,
+  `export { default as ${name}} from "./${name}"`,
+  { mode: "append" }
+);
+=======
+fs.writeFileSync(`./src/stories/${name}.stories.tsx`, story);
+>>>>>>> 4d160fa58552006bd7e27d2d973ad84987389e87

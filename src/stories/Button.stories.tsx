@@ -29,79 +29,79 @@ export const ButtonOutlineDisabled = Template.bind({});
 
 
 ButtonPrimary.args = {
-  color: "primary",
-  children: "Hello World",
+  variant: "primary",
+  children: "primary",
 };
 
 ButtonSecondary.args = {
-  color: "secondary",
-  children: "Hello World",
+  variant: "secondary",
+  children: "secondary",
 };
 
 ButtonSuccess.args = {
-  color: "success",
-  children: "Hello World",
+  variant: "success",
+  children: "success",
 };
 
 ButtonError.args = {
-  color: "error",
-  children: "Hello World",
+  variant: "error",
+  children: "error",
 };
 
 ButtonInfo.args = {
-  color: "info",
-  children: "Hello World",
+  variant: "info",
+  children: "info",
 };
 
 ButtonWarning.args = {
-  color: "warning",
-  children: "Hello World",
+  variant: "warning",
+  children: "warning",
 };
 
 ButtonDisabled.args = {
-  color: "primary",
-  children: "Hello World",
+  variant: "primary",
+  children: "disabled",
   disabled: true,
 }
 
 ButtonOutlinePrimary.args = {
-  color: "primary",
-  children: "Hello World",
+  variant: "primary",
+  children: "primary outline",
   outline: true,
 };
 
 ButtonOutlineSecondary.args = {
-  color: "secondary",
-  children: "Hello World",
+  variant: "secondary",
+  children: "secondary outline",
   outline: true,
 };
 
 ButtonOutlineSuccess.args = {
-  color: "success",
-  children: "Hello World",
+  variant: "success",
+  children: "success outline",
   outline: true,
 };
 
 ButtonOutlineError.args = {
-  color: "error",
-  children: "Hello World",
+  variant: "error",
+  children: "error outline",
   outline: true,
 };
 
 ButtonOutlineInfo.args = {
-  color: "info",
-  children: "Hello World",
+  variant: "info",
+  children: "info outline",
   outline: true,
 };
 
 ButtonOutlineWarning.args = {
-  color: "warning",
-  children: "Hello World",
+  variant: "warning",
+  children: "warning outline",
   outline: true,
 };
 
 ButtonOutlineDisabled.args = {
-  color: "primary",
-  children: "Hello World",
+  variant: "primary",
+  children: "outine disabled",
   disabled: true,
 }

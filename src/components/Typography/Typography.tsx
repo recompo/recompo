@@ -19,13 +19,12 @@ const Typography: FC<PropsWithChildren<TypographyProps>> = ({
   font,
   fontWeight
 }) => {
-  // const { textColor, font: themeFont, fontWeight: weight } = useTheme();
   const textProps = {
     style: {
       textAlign: align,
-      color: /*textColor ??*/ color,
-      fontFamily: /*themeFont ??*/ font,
-      fontWeight: /*weight ??*/ fontWeight
+      color: color,
+      fontFamily: font,
+      fontWeight: fontWeight
     }
   };
   if (variant === "h1") return <h1 {...textProps}>{children}</h1>;
