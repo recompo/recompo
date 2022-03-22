@@ -6,10 +6,17 @@
             "jsx": true
         }
     },
+    "env": {
+        "browser": true,
+        "node": true
+    },
     "plugins": [
         "@typescript-eslint",
         "react"
     ],
+    "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+    },
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
