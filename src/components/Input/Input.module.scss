@@ -11,30 +11,31 @@
   background-color: transparent;
   outline: none;
   transition: all 0.3s;
-}
-.Recompo_Input:focus {
-  border-bottom: 1px solid #000;
-}
-.Recompo_Input::placeholder {
-  color: #ccc;
-}
-.Recompo_Input-sm {
-  border-radius: 1.2rem;
-}
-.Recompo_Input-lg {
-  border-radius: 2rem;
-}
-.Recompo_Input-disabled {
-  color: #aaa;
-  border-bottom: 1px solid #aaa;
-  cursor: not-allowed;
-}
-.Recompo_Input-md {
-  border-radius: 1.5rem;
-}
-.Recompo_Input-xs {
-  border-radius: 1rem;
-}
-.Recompo_Input-xl {
-  border-radius: 2.5rem;
+
+  &:focus {
+    border-bottom: 1px solid #000;
+  }
+  &::placeholder {
+    color: #ccc;
+  }
+  &-sm {
+    border-radius: 1.2rem;
+  }
+  &-lg {
+    border-radius: 2rem;
+  }
+  &-disabled {
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+    cursor: not-allowed;
+  }
+  &-md {
+    border-radius: 1.5rem;
+  }
+  &-xs {
+    border-radius: 1rem;
+  }
+  &-xl {
+    border-radius: 2.5rem;
+  }
 }
