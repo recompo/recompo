@@ -17,7 +17,7 @@ const Input: FC<InputProps> = ({
   placeHolder,
   value,
   borderRadius,
-  name
+  name,
 }) => {
   if (label) {
     return (

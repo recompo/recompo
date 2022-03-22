@@ -10,7 +10,7 @@ module.exports = {
       {
         test: /\.ts[x]?$/i,
         exclude: /node_modules/,
-        use: ["swc-loader"]
+        use: ["swc-loader"],
       },
       {
         test: /\.module.css$/i,
@@ -20,11 +20,11 @@ module.exports = {
             loader: "css-loader",
             options: {
               importLoaders: 1,
-              modules: true
-            }
+              modules: true,
+            },
           },
-          "postcss-loader"
-        ]
+          "postcss-loader",
+        ],
       },
       {
         test: /\.css$/i,
@@ -35,16 +35,16 @@ module.exports = {
             loader: "css-loader",
             options: {
               importLoaders: 1,
-              modules: true
-            }
+              modules: true,
+            },
           },
-          "postcss-loader"
-        ]
-      }
-    ]
+          "postcss-loader",
+        ],
+      },
+    ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".jsx", ".css"]
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".css"],
   },
   entry: glob
     .sync("./src/**/*[!.test,.stories].{ts,tsx}")
@@ -61,7 +61,7 @@ module.exports = {
     path: path.join(__dirname, "dist"),
     filename: "[name].js",
     sourceMapFilename: "[name].js.map",
-    library: "recompo"
+    library: "recompo",
   },
-  externals: { React: "react", ReactDOM: "react-dom" }
+  externals: { React: "react", ReactDOM: "react-dom" },
 };

@@ -11,9 +11,9 @@ module.exports = async ({ config, mode }) => {
       loader: "swc-loader",
       options: {
         parseMap: true,
-        sourceMaps: true
-      }
-    }
+        sourceMaps: true,
+      },
+    },
   });
   config.module.rules.push({
     test: /\.module.s[ac]ss$/i,
@@ -22,11 +22,11 @@ module.exports = async ({ config, mode }) => {
       "style-loader",
       {
         loader: "css-loader",
-        options: { modules: true, importLoaders: 1 }
+        options: { modules: true, importLoaders: 1 },
       },
       "postcss-loader",
-      "sass-loader"
-    ]
+      "sass-loader",
+    ],
   });
   config.module.rules.push({
     test: /\.s[ac]ss$/i,
@@ -35,8 +35,8 @@ module.exports = async ({ config, mode }) => {
       "style-loader",
       { loader: "css-loader", options: { modules: true, importLoaders: 1 } },
       "postcss-loader",
-      "sass-loader"
-    ]
+      "sass-loader",
+    ],
   });
   return config;
 };

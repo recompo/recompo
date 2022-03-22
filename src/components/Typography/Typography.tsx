@@ -17,15 +17,15 @@ const Typography: FC<PropsWithChildren<TypographyProps>> = ({
   align = "match-parent",
   variant = "p",
   font,
-  fontWeight
+  fontWeight,
 }) => {
   const textProps = {
     style: {
       textAlign: align,
       color: color,
       fontFamily: font,
-      fontWeight: fontWeight
-    }
+      fontWeight: fontWeight,
+    },
   };
   if (variant === "h1") return <h1 {...textProps}>{children}</h1>;
   else if (variant === "h2") return <h2 {...textProps}>{children}</h2>;

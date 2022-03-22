@@ -7,7 +7,7 @@ export type ButtonGroupProps = {
 
 const ButtonGroup: FC<PropsWithChildren<ButtonGroupProps>> = ({
   children,
-  gap
+  gap,
 }) => {
   return (
     <div className={styles.ReCompo_ButtonGroup} role="group" style={{ gap }}>

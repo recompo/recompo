@@ -1,26 +1,26 @@
-import React, { FC, PropsWithChildren, useState } from "react";
-import styles from "./Navbar.module.scss";
-import { Property } from "csstype";
+import React, { FC, PropsWithChildren, useState } from "react"
+import styles from "./Navbar.module.scss"
+import { Property } from "csstype"
 
 interface NavLink {
-  name: string;
-  url: string;
+  name: string
+  url: string
 }
 
 type NavLogo = {
-  name: string;
-  url: string;
-};
+  name: string
+  url: string
+}
 
 export type NavbarProps = {
-  background?: string;
-  color?: string;
-  accent?: string;
-  links?: NavLink[];
-  logo?: NavLogo;
-  position?: Property.Position;
-  rounded?: boolean;
-};
+  background?: string
+  color?: string
+  accent?: string
+  links?: NavLink[]
+  logo?: NavLogo
+  position?: Property.Position
+  rounded?: boolean
+}
 
 const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
   background,
@@ -31,12 +31,12 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
   children,
   position
 }) => {
-  let links_: number;
-  const [menu, setMenu] = useState(false);
-  const toggleMenu = () => setMenu(!menu);
-  const closeMenu = () => setMenu(false);
-  const accentcolor = accent ? accent : color;
-  const pos = position ? position : "relative";
+  let links_: number
+  const [menu, setMenu] = useState(false)
+  const toggleMenu = () => setMenu(!menu)
+  const closeMenu = () => setMenu(false)
+  const accentcolor = accent ? accent : color
+  const pos = position ? position : "relative"
 
   const navStyles = {
     display: "flex",
@@ -49,7 +49,7 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
     background: background,
     color: color,
     width: "100%"
-  };
+  }
 
   return (
     <nav
@@ -75,7 +75,7 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
               <li key={idx} className={styles.link} onClick={closeMenu}>
                 <a href={link.url}>{link.name}</a>
               </li>
-            );
+            )
           })}
         </ul>
       ) : null}
@@ -90,7 +90,7 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
       </div>
       {children}
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

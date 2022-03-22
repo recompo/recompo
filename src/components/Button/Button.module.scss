@@ -5,73 +5,73 @@
   color: white;
   cursor: pointer;
 
-&:hover {
-  opacity: 0.8;
-}
-&-primary {
-  background-color: #0d6efd;
-}
+  &:hover {
+    opacity: 0.8;
+  }
+  &-primary {
+    background-color: #0d6efd;
+  }
 
-&-outline-primary {
-  color: #0d6efd;
-  border: 1px solid #0d6efd;
-  background-color: transparent;
-}
+  &-outline-primary {
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+    background-color: transparent;
+  }
 
-&-secondary {
-  background-color: #6c757d;
-}
+  &-secondary {
+    background-color: #6c757d;
+  }
 
-&-outline-secondary {
-  color: #6c757d;
-  border: 1px solid #6c757d;
-  background-color: transparent;
-}
+  &-outline-secondary {
+    color: #6c757d;
+    border: 1px solid #6c757d;
+    background-color: transparent;
+  }
 
-&-success {
-  background-color: #198754;
-}
+  &-success {
+    background-color: #198754;
+  }
 
-&-outline-success {
-  color: #198754;
-  border: 1px solid #198754;
-  background-color: transparent;
-}
+  &-outline-success {
+    color: #198754;
+    border: 1px solid #198754;
+    background-color: transparent;
+  }
 
-&-error {
-  background-color: #dc3545;
-}
+  &-error {
+    background-color: #dc3545;
+  }
 
-&-outline-error {
-  color: #dc3545;
-  border: 1px solid #dc3545;
-  background-color: transparent;
-}
+  &-outline-error {
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    background-color: transparent;
+  }
 
-&-info {
-  background-color: #0dcaf0;
-  color: black;
-}
+  &-info {
+    background-color: #0dcaf0;
+    color: black;
+  }
 
-&-outline-info {
-  color: #0dcaf0;
-  border: 1px solid #0dcaf0;
-  background-color: transparent;
-}
+  &-outline-info {
+    color: #0dcaf0;
+    border: 1px solid #0dcaf0;
+    background-color: transparent;
+  }
 
-&-warning {
-  background-color: #ffc107;
-  color: black;
-}
+  &-warning {
+    background-color: #ffc107;
+    color: black;
+  }
 
-&-outline-warning {
-  color: #ffc107;
-  border: 1px solid #ffc107;
-  background-color: transparent;
-}
+  &-outline-warning {
+    color: #ffc107;
+    border: 1px solid #ffc107;
+    background-color: transparent;
+  }
 
-&:disabled {
-  opacity: 0.8;
-  cursor: default;
-}
+  &:disabled {
+    opacity: 0.8;
+    cursor: default;
+  }
 }

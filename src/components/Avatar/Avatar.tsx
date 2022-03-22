@@ -13,7 +13,7 @@ const Avatar: FC<PropsWithChildren<AvatarProps>> = ({
   size,
   variant,
   src,
-  alt
+  alt,
 }) => {
   if (variant === "circular")
     return (
