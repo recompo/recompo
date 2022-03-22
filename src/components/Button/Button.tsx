@@ -18,7 +18,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
   children,
   variant,
   disabled,
-  outline
+  outline,
 }) => {
   const cls = outline
     ? styles[`Recompo_Button-outline-${variant}`]

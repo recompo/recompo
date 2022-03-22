@@ -1,107 +1,109 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import React, { ComponentProps, PropsWithChildren } from "react"
+import { ComponentStory, ComponentMeta } from "@storybook/react"
 // import Button from "../components/Button";
 import { Button } from "../"
 
-const Template: ComponentStory<typeof Button> = ({ children, ...args }) => (
+const Template: ComponentStory<typeof Button> = ({
+  children,
+  ...args
+}: PropsWithChildren<ComponentProps<typeof Button>>) => (
   <Button {...args}>{children}</Button>
-);
+)
 
 export default {
   title: "Button",
-  component: Button,
-} as ComponentMeta<typeof Button>;
+  component: Button
+} as ComponentMeta<typeof Button>
 
-export const ButtonPrimary = Template.bind({});
-export const ButtonSecondary = Template.bind({});
-export const ButtonSuccess = Template.bind({});
-export const ButtonError = Template.bind({});
-export const ButtonInfo = Template.bind({});
-export const ButtonWarning = Template.bind({});
-export const ButtonDisabled = Template.bind({});
-export const ButtonOutlinePrimary = Template.bind({});
-export const ButtonOutlineSecondary = Template.bind({});
-export const ButtonOutlineSuccess = Template.bind({});
-export const ButtonOutlineError = Template.bind({});
-export const ButtonOutlineInfo = Template.bind({});
-export const ButtonOutlineWarning = Template.bind({});
-export const ButtonOutlineDisabled = Template.bind({});
-
+export const ButtonPrimary = Template.bind({})
+export const ButtonSecondary = Template.bind({})
+export const ButtonSuccess = Template.bind({})
+export const ButtonError = Template.bind({})
+export const ButtonInfo = Template.bind({})
+export const ButtonWarning = Template.bind({})
+export const ButtonDisabled = Template.bind({})
+export const ButtonOutlinePrimary = Template.bind({})
+export const ButtonOutlineSecondary = Template.bind({})
+export const ButtonOutlineSuccess = Template.bind({})
+export const ButtonOutlineError = Template.bind({})
+export const ButtonOutlineInfo = Template.bind({})
+export const ButtonOutlineWarning = Template.bind({})
+export const ButtonOutlineDisabled = Template.bind({})
 
 ButtonPrimary.args = {
   variant: "primary",
-  children: "primary",
-};
+  children: "primary"
+}
 
 ButtonSecondary.args = {
   variant: "secondary",
-  children: "secondary",
-};
+  children: "secondary"
+}
 
 ButtonSuccess.args = {
   variant: "success",
-  children: "success",
-};
+  children: "success"
+}
 
 ButtonError.args = {
   variant: "error",
-  children: "error",
-};
+  children: "error"
+}
 
 ButtonInfo.args = {
   variant: "info",
-  children: "info",
-};
+  children: "info"
+}
 
 ButtonWarning.args = {
   variant: "warning",
-  children: "warning",
-};
+  children: "warning"
+}
 
 ButtonDisabled.args = {
   variant: "primary",
   children: "disabled",
-  disabled: true,
+  disabled: true
 }
 
 ButtonOutlinePrimary.args = {
   variant: "primary",
   children: "primary outline",
-  outline: true,
-};
+  outline: true
+}
 
 ButtonOutlineSecondary.args = {
   variant: "secondary",
   children: "secondary outline",
-  outline: true,
-};
+  outline: true
+}
 
 ButtonOutlineSuccess.args = {
   variant: "success",
   children: "success outline",
-  outline: true,
-};
+  outline: true
+}
 
 ButtonOutlineError.args = {
   variant: "error",
   children: "error outline",
-  outline: true,
-};
+  outline: true
+}
 
 ButtonOutlineInfo.args = {
   variant: "info",
   children: "info outline",
-  outline: true,
-};
+  outline: true
+}
 
 ButtonOutlineWarning.args = {
   variant: "warning",
   children: "warning outline",
-  outline: true,
-};
+  outline: true
+}
 
 ButtonOutlineDisabled.args = {
   variant: "primary",
   children: "outine disabled",
-  disabled: true,
+  disabled: true
 }
