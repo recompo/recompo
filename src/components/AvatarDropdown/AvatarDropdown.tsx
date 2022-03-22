@@ -1,5 +1,6 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, PropsWithChildren } from 'react';
 import styles from './AvatarDropdown.module.scss'
+import { Avatar } from '../'
 
 type DropdownItem = {
 	image: string;
@@ -8,36 +9,39 @@ type DropdownItem = {
 }
 
 export type AvatarDropdownProps = {
-	image: string;
+	size: string;
+	variant: "circular" | "rounded" | "square";
+	src: string;
+	alt: string;
+	background: string;
+	color: string;
 	dropdown_items: DropdownItem[];
-}
+};
 
-const AvatarDropdown: FC<AvatarDropdownProps> = ({ dropdown_items, image }) => {
+const AvatarDropdown: FC<PropsWithChildren<AvatarDropdownProps>> = ({ dropdown_items, src, alt, variant, size, children, background, color }) => {
 	const [dropdown, setDropdown] = useState(false)
 	const toggleDropdown = () => setDropdown(!dropdown);
 	const closeDropdown = () => setDropdown(false);
 
 	return (
-		<div className="avatar-dropdown" onClick={toggleDropdown}>
-			<div className="avatar">
-				<img src={image} alt="Avatar Dropdown" />
-			</div>
-			<div className={dropdown ? "dropdown active" : "dropdown"}>
-				<h1>Actions</h1>
+		<div className={styles.avatarDropdown}>
+			<div onClick={toggleDropdown} className={styles.avatar}><Avatar variant={variant} src={src} alt={alt} size={size} /></div>
+			<div className={dropdown ? styles.dopdownActive : styles.dropdown} style={{ background: background }}>
+				<h1 style={{ color: color }}>Actions</h1>
 				<ul>
-					{dropdown_items.map((item: DropdownItem, index: number) => (
-						<li key={index} onClick={closeDropdown}>{
+					{dropdown_items.map((item: DropdownItem) => (
+						<li onClick={closeDropdown}>{
 							item.href
 								?
 								<a href={item.href}>
 									<img src={item.image} alt={item.text} />
-									<span>{item.text}</span>
+									<span style={{ color: color }}>{item.text}</span>
 								</a>
 								:
-								<>
+								<a>
 									<img src={item.image} alt={item.text} />
-									<span>{item.text}</span>
-								</>
+									<span style={{ color: color }}>{item.text}</span>
+								</a>
 						}</li>
 					))}
 				</ul>

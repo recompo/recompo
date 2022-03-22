@@ -59,7 +59,7 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
       data-accent={accentcolor}
       data-links={links_}
       data-position={pos}
-      style={{ background }}
+      style={{ background: "#fff" }}
     >
       {logo ? (
         <a href={logo.url} className={styles.logo}>
