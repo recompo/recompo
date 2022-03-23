@@ -21,13 +21,13 @@ yarn add recompo
 An example on how to use
 
 ```js
-import { Typography } from "recompo";
+import { Typography } from "recompo"
 
 const App = () => {
-  <Typography>Hello world</Typography>;
-};
+  ;<Typography>Hello world</Typography>
+}
 
-export default App;
+export default App
 ```
 
 ---

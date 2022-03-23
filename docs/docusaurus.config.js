@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const lightCodeTheme = require("prism-react-renderer/themes/github")
+const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -25,19 +25,19 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/recompo/recompo",
+          editUrl: "https://github.com/recompo/recompo"
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
-      }),
-    ],
+          customCss: require.resolve("./src/css/custom.css")
+        }
+      })
+    ]
   ],
 
   themeConfig:
@@ -47,21 +47,21 @@ const config = {
         title: "Recompo",
         logo: {
           alt: "Recompo Logo",
-          src: "img/logo-dark.png",
+          src: "img/logo-dark.png"
         },
         items: [
           {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Docs",
+            label: "Docs"
           },
           {
             href: "https://github.com/recompo/recompo",
             label: "GitHub",
-            position: "right",
-          },
-        ],
+            position: "right"
+          }
+        ]
       },
       footer: {
         style: "dark",
@@ -71,39 +71,39 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
+                to: "/docs/intro"
+              }
+            ]
           },
           {
             title: "Community",
             items: [
               {
                 label: "Discord",
-                href: "https://discord.gg/Mg8cUDE4C9",
-              },
-            ],
+                href: "https://discord.gg/Mg8cUDE4C9"
+              }
+            ]
           },
           {
             title: "More",
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
+                href: "https://github.com/facebook/docusaurus"
+              }
+            ]
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Recompo`,
+        copyright: `Copyright © ${new Date().getFullYear()} Recompo`
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        darkTheme: darkCodeTheme
       },
       colorMode: {
-        respectPrefersColorScheme: true,
-      },
-    }),
-};
+        respectPrefersColorScheme: true
+      }
+    })
+}
 
-module.exports = config;
+module.exports = config
