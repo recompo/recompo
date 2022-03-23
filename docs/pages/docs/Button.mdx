@@ -1,0 +1,45 @@
+import Button from "../../../dist/Button"; 
+
+### Description
+
+A Button Component with different variants
+
+### Available Props
+- Optional
+   - variant &rarr; `primary` `success` `error` `info` `warning` `inherit` `secondary`
+   - disabled &rarr; If set to `true` button will be disabled. Defaults `false`
+
+### Usage
+
+```js
+import { Button } from "recompo";
+// OR
+import Button "recompo/Button";
+
+const App = () => {
+  return (
+    <>
+      <Button variant="primary">Hello World</Button>
+    </>
+  );
+};
+```
+
+1. Primary
+   <br />
+   <Button variant="primary">Hello World</Button>
+2. Secondary
+   <br />
+   <Button variant="secondary">Hello World</Button>
+3. Success
+   <br />
+   <Button variant="success">Hello World</Button>
+4. Error
+   <br />
+   <Button variant="error">Hello World</Button>
+5. Info
+   <br />
+   <Button variant="info">Hello World</Button>
+6. Warning
+   <br />
+   <Button variant="warning">Hello World</Button>

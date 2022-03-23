@@ -33,7 +33,9 @@ module.exports = {
             loader: "css-loader",
             options: {
               importLoaders: 1,
-              modules: true
+              modules: {
+                localIdentName: "foo__[name]__[local]"
+              }
             }
           },
           "postcss-loader",
@@ -49,7 +51,9 @@ module.exports = {
             loader: "css-loader",
             options: {
               importLoaders: 1,
-              modules: true
+              modules: {
+                localIdentName: "foo__[name]__[local]"
+              }
             }
           },
           "postcss-loader",
@@ -76,7 +80,8 @@ module.exports = {
     path: path.join(__dirname, "dist"),
     filename: "[name].js",
     sourceMapFilename: "[name].js.map",
-    library: { name: "recompo", type: "umd" }
+    library: { name: "[name]", type: "umd" },
+    globalObject: "this"
   },
   externals: { react: "react", "react-dom": "react-dom" }
 }

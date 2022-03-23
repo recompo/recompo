@@ -43,8 +43,8 @@ const AvatarDropdown: FC<PropsWithChildren<AvatarDropdownProps>> = ({
       >
         <h1 style={{ color: color }}>Actions</h1>
         <ul>
-          {dropdown_items.map((item: DropdownItem) => (
-            <li key={item.text} onClick={closeDropdown}>
+          {dropdown_items.map((item: DropdownItem, idx) => (
+            <li onClick={closeDropdown} key={idx}>
               {item.href ? (
                 <a href={item.href}>
                   <img src={item.image} alt={item.text} />
