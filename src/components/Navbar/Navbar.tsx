@@ -1,4 +1,5 @@
-import React, { FC, PropsWithChildren, useState } from "react"
+import React from "react"
+import { FC, PropsWithChildren, useState } from "react"
 import styles from "./Navbar.module.scss"
 import { Property } from "csstype"
 

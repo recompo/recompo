@@ -1,4 +1,5 @@
-import React, { FC } from "react"
+import React from "react"
+import { FC, PropsWithChildren } from "react"
 import styles from "./Input.module.scss"
 export type InputProps = {
   label?: string
@@ -27,7 +28,13 @@ const Input: FC<InputProps> = ({
           <input
             name={name}
             disabled={disabled}
-            onChange={onChange ? onChange : () => {}}
+            onChange={
+              onChange
+                ? onChange
+                : () => {
+                    return
+                  }
+            }
             value={value}
             placeholder={placeHolder}
             className={`${styles[`Recompo_Input-${borderRadius}`]} ${
@@ -42,7 +49,13 @@ const Input: FC<InputProps> = ({
     <input
       name={name}
       disabled={disabled}
-      onChange={onChange ? onChange : () => {}}
+      onChange={
+        onChange
+          ? onChange
+          : () => {
+              return
+            }
+      }
       value={value}
       placeholder={placeHolder}
       className={`${styles[`Recompo_Button-${borderRadius}`]}`}

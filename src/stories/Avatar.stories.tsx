@@ -21,9 +21,9 @@ export const AvatarSquare = Template.bind({})
 
 AvatarCircular.args = {
   src: "https://images-ext-2.discordapp.net/external/fB5LASL_lHDLCWSZ347nu58xwNiSmIT6vVsLX0ugk9c/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/828288323684401202/05ab95219da2a7d67215974da05bb875.webp",
-  alt: "Test",
-  size: "100px",
-  variant: "circular"
+  alt: "best",
+  height: 250,
+  width: 240,
 }
 
 AvatarRounded.args = {

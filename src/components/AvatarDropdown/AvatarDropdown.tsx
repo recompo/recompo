@@ -1,8 +1,9 @@
-import React, { FC, useState, PropsWithChildren } from "react"
+import React from 'react'
+import { FC, useState } from "react"
 import styles from "./AvatarDropdown.module.scss"
 import { Avatar } from "../"
 
-type DropdownItem = {
+type Items = {
   image: string
   text: string
   href?: string
@@ -15,16 +16,15 @@ export type AvatarDropdownProps = {
   alt: string
   background: string
   color: string
-  dropdown_items: DropdownItem[]
+  items: Items[]
 }
 
-const AvatarDropdown: FC<PropsWithChildren<AvatarDropdownProps>> = ({
-  dropdown_items,
+const AvatarDropdown: FC<AvatarDropdownProps> = ({
+  items,
   src,
   alt,
   variant,
   size,
-  children,
   background,
   color
 }) => {
@@ -43,7 +43,7 @@ const AvatarDropdown: FC<PropsWithChildren<AvatarDropdownProps>> = ({
       >
         <h1 style={{ color: color }}>Actions</h1>
         <ul>
-          {dropdown_items.map((item: DropdownItem, idx) => (
+          {items.map((item: Items, idx) => (
             <li onClick={closeDropdown} key={idx}>
               {item.href ? (
                 <a href={item.href}>

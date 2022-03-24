@@ -1,4 +1,5 @@
-import React, { FC, PropsWithChildren } from "react"
+import React from "react"
+import { FC, PropsWithChildren } from "react"
 import styles from "./ButtonGroup.module.scss"
 
 export type ButtonGroupProps = {
