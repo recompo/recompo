@@ -6,25 +6,35 @@ Container Component can be used to Center the content in your page both horizont
 
 - Optional
 
-    - background &rarr; `string`
-    - color &rarr; `string` text color
-    - accent &rarr; `string` accent color
-    - links &rarr; `[{ name, url}]`
-    - logo &rarr; `[{ name, url}]`
-    - position &rarr; `position` css position property 
-    - rounded &rarr; `boolean`
+  - background &rarr; `string`
+  - color &rarr; `string` text color
+  - accent &rarr; `string` accent color
+  - links &rarr; `[{ name, url}]`
+  - logo &rarr; `[{ name, url}]`
+  - position &rarr; `position` css position property
+  - rounded &rarr; `boolean`
+
 ### Usage
 
 ```jsx
-import { Navbar } from "recompo";
+import { Navbar } from "recompo"
 // OR
-import Navbar from "recompo/Navbar";
+import Navbar from "recompo/Navbar"
 
 const App = () => {
   return (
     <>
-    <Navbar background="black" color="white" accent="black" rounded={true} radius={20}> Hello</Navbar>
+      <Navbar
+        background="black"
+        color="white"
+        accent="black"
+        rounded={true}
+        radius={20}
+      >
+        {" "}
+        Hello
+      </Navbar>
     </>
-  );
-};
+  )
+}
 ```

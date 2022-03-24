@@ -1,0 +1,21 @@
+{
+  "unversionedId": "Components/Typography",
+  "id": "Components/Typography",
+  "title": "Typography",
+  "description": "Description",
+  "source": "@site/docs/Components/Typography.md",
+  "sourceDirName": "Components",
+  "slug": "/Components/Typography",
+  "permalink": "/docs/Components/Typography",
+  "editUrl": "https://github.com/recompo/recompo/docs/Components/Typography.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar-position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Container",
+    "permalink": "/docs/Components/Container"
+  }
+}

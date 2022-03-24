@@ -1,0 +1,71 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "link",
+        "label": "Intro",
+        "href": "/docs/intro",
+        "docId": "intro"
+      },
+      {
+        "type": "category",
+        "label": "Components",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Button",
+            "href": "/docs/Components/Button",
+            "docId": "Components/Button"
+          },
+          {
+            "type": "link",
+            "label": "Container",
+            "href": "/docs/Components/Container",
+            "docId": "Components/Container"
+          },
+          {
+            "type": "link",
+            "label": "Typography",
+            "href": "/docs/Components/Typography",
+            "docId": "Components/Typography"
+          }
+        ]
+      }
+    ]
+  },
+  "docs": {
+    "Components/Button": {
+      "id": "Components/Button",
+      "title": "Button",
+      "description": "Description",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Container": {
+      "id": "Components/Container",
+      "title": "Container",
+      "description": "Description",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Typography": {
+      "id": "Components/Typography",
+      "title": "Typography",
+      "description": "Description",
+      "sidebar": "tutorialSidebar"
+    },
+    "intro": {
+      "id": "intro",
+      "title": "Intro",
+      "description": "recompo logo",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}
