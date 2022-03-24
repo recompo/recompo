@@ -12,8 +12,8 @@ export interface AvatarProps {
   alt?: string
   variant?: "circular" | "rounded" | "square"
   size?: number | string
-  height: number | string
-  width: number | string
+  height?: number | string
+  width?: number | string
   radius?: number | string
   className?: string
 }
