@@ -15,6 +15,7 @@ export interface AvatarProps {
   height: number | string
   width: number | string
   radius?: number | string
+  className?: string
 }
 
 const Avatar: FC<AvatarProps> = ({
@@ -26,7 +27,8 @@ const Avatar: FC<AvatarProps> = ({
   size,
   height,
   width,
-  radius
+  radius,
+  className
 }) => {
   // Check if the variant is rounded
   if (variant === "rounded")
@@ -34,6 +36,7 @@ const Avatar: FC<AvatarProps> = ({
     return (
       <img
         src={src}
+        className={className}
         alt={alt ? alt : "loading"}
         // if size is provided then it would be size or else it will be height
         height={size ? size : height || height ? height : 250}
@@ -48,6 +51,7 @@ const Avatar: FC<AvatarProps> = ({
     return (
       <img
         src={src}
+        className={className}
         alt={alt ? alt : "loading"}
         height={size ? size : height || height ? height : 250}
         width={size ? size : width || width ? width : 250}
@@ -59,6 +63,7 @@ const Avatar: FC<AvatarProps> = ({
     return (
       <img
         src={src}
+        className={className ? className : ''}
         alt={alt ? alt : "loading"}
         height={size ? size : height || height ? height : 250}
         width={size ? size : width || width ? width : 250}

@@ -47,7 +47,10 @@ ButtonSuccess.args = {
 
 ButtonError.args = {
   variant: "error",
-  children: "error"
+  children: "error",
+  onClick: () => {
+    console.log('hi')
+  }
 }
 
 ButtonInfo.args = {
