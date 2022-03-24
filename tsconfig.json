@@ -1,41 +1,28 @@
 {
-    "compilerOptions": {
-        "declaration": true,
-        "module": "esnext",
-        "target": "es5",
-        "lib": [
-            "esnext",
-            "dom",
-            "dom.iterable"
-        ],
-        "sourceMap": true,
-        "jsx": "react",
-        "moduleResolution": "node",
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "outDir": "dist",
-        "emitDeclarationOnly": true,
-        "baseUrl": "src",
-        "paths": {
-            "theme/*": [
-                "theme/*"
-            ],
-            "components/*": [
-                "components/*"
-            ],
-            "images/*": [
-                "../public/images"
-            ]
-        }
-    },
-    "include": [
-        "src/**/*",
-        "css.d.ts"
-    ],
-    "exclude": [
-        "node_modules",
-        "build",
-        "src/stories/**/*.tsx",
-        "src/__tests__/**/*.test.tsx"
-    ],
+  "compilerOptions": {
+    "declaration": true,
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "sourceMap": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "emitDeclarationOnly": true,
+    "baseUrl": "src",
+    "paths": {
+      "theme/*": ["theme/*"],
+      "components/*": ["components/*"],
+      "images/*": ["../public/images"]
+    }
+  },
+  "include": ["src/**/*", "css.d.ts"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "src/stories/**/*.tsx",
+    "src/__tests__/**/*.test.tsx"
+  ]
 }

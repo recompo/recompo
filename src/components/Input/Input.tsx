@@ -1,14 +1,14 @@
-import React, { FC } from "react";
-import styles from "./Input.module.css";
+import React, { FC } from "react"
+import styles from "./Input.module.scss"
 export type InputProps = {
-  label?: string;
-  disabled?: boolean;
-  borderRadius?: "xs" | "sm" | "md" | "lg" | "xl";
-  placeHolder?: string;
-  value?: string;
-  onChange?: any;
-  name: string;
-};
+  label?: string
+  disabled?: boolean
+  borderRadius?: "xs" | "sm" | "md" | "lg" | "xl"
+  placeHolder?: string
+  value?: string
+  onChange?: any
+  name: string
+}
 
 const Input: FC<InputProps> = ({
   label,
@@ -17,7 +17,7 @@ const Input: FC<InputProps> = ({
   placeHolder,
   value,
   borderRadius,
-  name,
+  name
 }) => {
   if (label) {
     return (
@@ -36,7 +36,7 @@ const Input: FC<InputProps> = ({
           />
         </label>
       </>
-    );
+    )
   }
   return (
     <input
@@ -47,7 +47,7 @@ const Input: FC<InputProps> = ({
       placeholder={placeHolder}
       className={`${styles[`Recompo_Button-${borderRadius}`]}`}
     />
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

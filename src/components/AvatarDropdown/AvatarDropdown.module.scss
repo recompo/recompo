@@ -1,0 +1,87 @@
+.dropdown {
+  display: none;
+}
+
+.dropdownActive {
+  display: block;
+  top: 30px;
+  position: absolute;
+}
+
+.avatarDropdown * {
+  box-sizing: border-box;
+}
+
+.avatarDropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.avatarDropdown .avatar {
+  cursor: pointer;
+}
+
+.avatarDropdown .dropdown,
+.avatarDropdown .dropdownActive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 250px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.avatarDropdown .dropdown h1,
+.avatarDropdown .dropdownActive h1 {
+  font-size: 1.4rem;
+  padding: 10px;
+}
+
+.avatarDropdown .dropdown ul,
+.avatarDropdown .dropdownActive ul {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.avatarDropdown .dropdown ul li,
+.avatarDropdown .dropdownActive ul li {
+  list-style: none;
+}
+
+.avatarDropdown .dropdown ul li a,
+.avatarDropdown .dropdownActive ul li a {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  justify-content: left;
+  height: 80px;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.avatarDropdown .dropdown ul li a img,
+.avatarDropdown .dropdownActive ul li a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.avatarDropdown .dropdown ul li a span,
+.avatarDropdown .dropdownActive ul li a span {
+  font-size: 1.2rem;
+}

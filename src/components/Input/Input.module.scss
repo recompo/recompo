@@ -1,0 +1,41 @@
+.Recompo_Input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 0;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  outline: none;
+  transition: all 0.3s;
+
+  &:focus {
+    border-bottom: 1px solid #000;
+  }
+  &::placeholder {
+    color: #ccc;
+  }
+  &-sm {
+    border-radius: 1.2rem;
+  }
+  &-lg {
+    border-radius: 2rem;
+  }
+  &-disabled {
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+    cursor: not-allowed;
+  }
+  &-md {
+    border-radius: 1.5rem;
+  }
+  &-xs {
+    border-radius: 1rem;
+  }
+  &-xl {
+    border-radius: 2.5rem;
+  }
+}
