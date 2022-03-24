@@ -46,10 +46,6 @@ export const Variant = Template.bind({});
 
 Variant.args = {
 };
-<<<<<<< HEAD
-`;
-fs.writeFileSync(`./src/stories/${name}.stories.tsx`, story);
-=======
 `
 
 fs.writeFileSync(`${rootPath}/src/stories/${name}.stories.tsx`, story)
@@ -59,4 +55,3 @@ fs.writeFileSync(
   { mode: "append" }
 )
 console.log(`Created component ${name}`)
->>>>>>> c3c7568263697fda31bf62ceabf5c47b9cf34cbd
