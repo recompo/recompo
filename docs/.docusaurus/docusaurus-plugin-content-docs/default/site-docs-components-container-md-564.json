@@ -1,0 +1,25 @@
+{
+  "unversionedId": "Components/Container",
+  "id": "Components/Container",
+  "title": "Container",
+  "description": "Description",
+  "source": "@site/docs/Components/Container.md",
+  "sourceDirName": "Components",
+  "slug": "/Components/Container",
+  "permalink": "/docs/Components/Container",
+  "editUrl": "https://github.com/recompo/recompo/docs/Components/Container.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar-position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Button",
+    "permalink": "/docs/Components/Button"
+  },
+  "next": {
+    "title": "Typography",
+    "permalink": "/docs/Components/Typography"
+  }
+}

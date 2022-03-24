@@ -38,7 +38,7 @@ const AvatarDropdown: FC<PropsWithChildren<AvatarDropdownProps>> = ({
         <Avatar variant={variant} src={src} alt={alt} size={size} />
       </div>
       <div
-        className={dropdown ? styles.dopdownActive : styles.dropdown}
+        className={dropdown ? styles.dropdownActive : styles.dropdown}
         style={{ background: background }}
       >
         <h1 style={{ color: color }}>Actions</h1>

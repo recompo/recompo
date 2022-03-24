@@ -17,13 +17,10 @@ const ${name} = () => {
 }
 
 export default ${name}
-<<<<<<< HEAD
-`;
-const dir = `./src/components/${name}`;
-=======
+
 `
 const dir = `${rootPath}/src/components/${name}`
->>>>>>> c3c7568263697fda31bf62ceabf5c47b9cf34cbd
+
 
 fs.mkdirSync(`${dir}`)
 fs.writeFileSync(`${dir}/${name}.tsx`, component)

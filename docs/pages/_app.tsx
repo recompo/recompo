@@ -1,6 +1,6 @@
 import { AppProps } from "next/app"
 import Prism from "prism-react-renderer/prism"
-(typeof global !== "undefined" ? global : window).Prism = Prism
+;(typeof global !== "undefined" ? global : window).Prism = Prism
 
 import "nextra-theme-docs/style.css"
 import "../../dist/style.css"
