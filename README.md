@@ -24,7 +24,7 @@ An example on how to use
 import { Typography } from "recompo"
 
 const App = () => {
-  ;<Typography>Hello world</Typography>
+  <Typography>Hello world</Typography>
 }
 
 export default App
