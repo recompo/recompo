@@ -72,6 +72,9 @@
 
   &:disabled {
     opacity: 0.8;
-    cursor: default;
+    cursor: not-allowed;
+    background-color: transparent;
+    color:grey;
+    border: 1px solid grey;
   }
 }
