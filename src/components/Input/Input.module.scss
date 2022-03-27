@@ -11,6 +11,7 @@
   background-color: transparent;
   outline: none;
   transition: all 0.3s;
+  border-radius: 0.32rem;
 
   &:focus {
     border-bottom: 1px solid #000;
@@ -19,23 +20,24 @@
     color: #ccc;
   }
   &-sm {
-    border-radius: 1.2rem;
+    // border-radius: 1.2rem;
   }
   &-lg {
-    border-radius: 2rem;
+    // border-radius: 2rem;
   }
   &-disabled {
     color: #aaa;
     border-bottom: 1px solid #aaa;
     cursor: not-allowed;
+    background-color: grey;
   }
   &-md {
-    border-radius: 1.5rem;
+    // border-radius: 0.32rem;
   }
   &-xs {
-    border-radius: 1rem;
+    // border-radius: 1rem;
   }
   &-xl {
-    border-radius: 2.5rem;
+    // border-radius: 2.5rem;
   }
 }
