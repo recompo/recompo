@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [new MiniCssExtractPlugin({ ignoreOrder: true })],
   // do not split the css.
   optimization: {
     splitChunks: {
@@ -63,7 +63,12 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".jsx", ".css"]
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".scss"],
+
+    alias: {
+      // Needed when library is linked via `npm link` to app
+      react: path.resolve("./node_modules/react")
+    }
   },
   entry: glob
     .sync("./src/**/*[!.test,.stories].{ts,tsx}")
