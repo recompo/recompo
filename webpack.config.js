@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [new MiniCssExtractPlugin({ ignoreOrder: true })],
   // do not split the css.
   optimization: {
     splitChunks: {
@@ -12,7 +12,7 @@ module.exports = {
         style: {
           type: "css/mini-extract",
           name: "style",
-          chunks: (chunk) => true,
+          chunks: () => true,
           enforce: true
         }
       }
