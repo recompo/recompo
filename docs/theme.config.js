@@ -205,6 +205,7 @@ c-24 12 -128 61 -230 109 l-186 87 -49 -25z"
         content="Recompo is a free and open-source project that is designed for customizability and speed and is easy to use and powerful"
       />
       <meta name="og:title" content="Recompo" />
+      <link rel="icon" href="/logo-dark.png"/>
     </>
   )
 }
