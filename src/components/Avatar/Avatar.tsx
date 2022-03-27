@@ -3,8 +3,11 @@ import React from "react"
 import { FC } from "react"
 // Import Styles
 import styles from "./Avatar.module.scss"
-
+import {Properties} from 'csstype'
 // Props needed
+export interface Style {
+  avatar: Properties
+}
 export interface AvatarProps {
   // Required
   src: string
@@ -16,6 +19,7 @@ export interface AvatarProps {
   width?: number | string
   radius?: number | string
   className?: string
+  style? : Style
 }
 
 const Avatar: FC<AvatarProps> = ({
@@ -28,8 +32,15 @@ const Avatar: FC<AvatarProps> = ({
   height,
   width,
   radius,
-  className
+  className,
+  style
 }) => {
+  const styles = {
+    style: {
+      borderRadius: radius ? radius : "2rem",
+      style
+    }
+  }
   // Check if the variant is rounded
   if (variant === "rounded")
     // Return if it is
@@ -43,7 +54,7 @@ const Avatar: FC<AvatarProps> = ({
         // if size is provided then it would be size or else it would be width
         width={size ? size : width || width ? width : 250}
         // if radius is provided then it would be radius or else it would be the number provided
-        style={{ borderRadius: radius ? radius : "25px" }}
+        {...styles}
       />
     )
   // Check if square
@@ -55,7 +66,7 @@ const Avatar: FC<AvatarProps> = ({
         alt={alt ? alt : "loading"}
         height={size ? size : height || height ? height : 250}
         width={size ? size : width || width ? width : 250}
-        style={{ borderRadius: radius ? radius : "" }}
+        {...styles}
       />
     )
   // if nothing is provided then switch to the default
@@ -67,7 +78,7 @@ const Avatar: FC<AvatarProps> = ({
         alt={alt ? alt : "loading"}
         height={size ? size : height || height ? height : 250}
         width={size ? size : width || width ? width : 250}
-        style={{ borderRadius: radius ? radius : "50%" }}
+        {...styles}
       />
     )
   }

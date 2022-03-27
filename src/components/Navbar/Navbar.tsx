@@ -1,96 +1,162 @@
+// Imports
 import React from "react"
 import { FC, PropsWithChildren, useState } from "react"
 import styles from "./Navbar.module.scss"
 import { Property } from "csstype"
-
-interface NavLink {
+import { AvatarProps } from '../Avatar/Avatar'
+import Avatar from "../Avatar"
+import Typography from "../Typography"
+// Required for props
+interface Links {
   name: string
-  url: string
+  url?: string
+  font?: string
+  weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+  color?: Property.Color | string
 }
-
-type NavLogo = {
-  name: string
-  url: string
+interface MenuIcon {
+  name?: string
+  openIconURL?: string
+  closeIconURL?: string
 }
-
-export type NavbarProps = {
+interface Logo {
+  avatar: AvatarProps
+  align?: "start" | "center" | "end"
+  gap?: number | string
+  left?: number | string
+}
+// Props
+export interface NavbarProps {
+  // Required
+  logo: Logo
+  // Optional
+  accent?: string
   background?: string
   color?: string
-  accent?: string
-  links?: NavLink[]
-  logo?: NavLogo
+  links?: Links[]
   position?: Property.Position
   rounded?: boolean
+  radius?: number | string
+  variant?: "glassy" | "transparent" | "solid"
+  MenuIcon?: MenuIcon
+  margin?: number | string
+  border?: boolean
+  borderColor?: string
+  shadow?: boolean
 }
 
 const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
+  // Required
+  logo,
+  // Optional
+  accent,
   background,
   color,
-  accent,
-  links,
-  logo,
   children,
-  position
+  links,
+  position,
+  rounded,
+  radius,
+  variant,
+  MenuIcon,
+  margin,
+  border,
+  borderColor,
+  shadow = true
 }) => {
-  let links_: number
+  // States
   const [menu, setMenu] = useState(false)
+  // Callbacks
   const toggleMenu = () => setMenu(!menu)
   const closeMenu = () => setMenu(false)
-  const accentcolor = accent ? accent : color
-  const pos = position ? position : "relative"
-
+  const accentColor = accent ? accent : color
+  const pos = position ? position : "fixed"
   const navStyles = {
-    display: "flex",
-    justifyContent: "center",
-    boxSizing: "border-box",
-    alignItems: "center",
-    textAlign: "center",
-    padding: "20px",
-    height: "80px",
-    background: background,
-    color: color,
-    width: "100%"
+    style: {
+      backgroundColor: background
+        ? `${variant === "glassy" ? `rgba(${background}, 0.5)` : background}`
+        : "",
+      position: pos,
+      borderRadius: rounded ? `${radius ? radius : "2rem"}` : 0,
+      color: color ? color : "black",
+      margin: rounded ? `${margin ? margin : 0}` : 0,
+      width: rounded ? "98%" : "100vw",
+      justifyContent: logo.align ? logo.align : "start",
+      backdropFilter: variant === "glassy" ? `blur(16px)` : "",
+      gap: logo.gap ? logo.gap : 0,
+      paddingLeft: logo.left ? logo.left : 20,
+      borderBottom: border
+        ? `2px solid ${borderColor ? borderColor : "#e5e7eb"}`
+        : "",
+      boxShadow: shadow ? 
+        "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)" : '',
+        marginTop: rounded ? '3vh' : 0
+    }
   }
-
   return (
-    <nav
-      className={styles.navbar}
-      data-background={background}
-      data-color={color}
-      data-accent={accentcolor}
-      data-links={links_}
-      data-position={pos}
-      style={{ background: "#fff" }}
-    >
-      {logo ? (
-        <a href={logo.url} className={styles.logo}>
-          {logo.name}
-        </a>
-      ) : (
-        <div></div>
-      )}
-      {links ? (
-        <ul className={styles.links}>
-          {links.map((link: NavLink, idx) => {
-            return (
-              <li key={idx} className={styles.link} onClick={closeMenu}>
-                <a href={link.url}>{link.name}</a>
-              </li>
-            )
-          })}
-        </ul>
-      ) : null}
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
-        <img
-          src={menu ? "/images/nav-close.svg" : "/images/nav-bars.svg"}
-          alt={menu ? "Close" : "Menu"}
-          className="toggle"
-          onClick={toggleMenu}
-          style={{ textAlign: "right" }}
-        />
-      </div>
-      {children}
-    </nav>
+    <>
+      <nav className={styles.navbar} {...navStyles}>
+        <div style={{ justifyContent: logo?.align }}>
+          <Avatar
+            radius={logo.avatar?.radius ? logo.avatar.radius : "50%"}
+            src={logo.avatar?.src}
+            style={{
+              avatar: {
+                marginTop: "35px"
+              }
+            }}
+            alt={logo.avatar?.alt ? logo.avatar.alt : "loading..."}
+            size={logo.avatar?.size ? logo.avatar.size : 50}
+          />
+        </div>
+        {links ? (
+          <ul className={styles.links}>
+            {links.map((link: Links, random) => {
+              return (
+                // Typography
+                <Typography
+                  key={random}
+                  className={styles.link}
+                  fontWeight={link?.weight}
+                  variant="a"
+                  href={link.url ? link.url : "/"}
+                  font={
+                    link?.font
+                      ? link.font
+                      : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+                  }
+                >
+                  {" "}
+                  {link.name}
+                </Typography>
+              )
+            })}
+          </ul>
+        ) : null}
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <img
+            src={
+              menu
+                ? `${
+                    MenuIcon?.closeIconURL
+                      ? MenuIcon.closeIconURL
+                      : `https://res.cloudinary.com/recompo/image/upload/v1648295848/menuClose_dgltoc.svg`
+                  }`
+                : `${
+                    MenuIcon?.openIconURL !== undefined
+                      ? MenuIcon.openIconURL
+                      : "https://res.cloudinary.com/recompo/image/upload/v1648295848/menuOpen_wc5oso.svg"
+                  }`
+            }
+            alt={menu ? "Close" : "Menu"}
+            className="toggle"
+            onClick={toggleMenu}
+            style={{ textAlign: "right" }}
+          />
+        </div>
+        {children}
+      </nav>
+    </>
   )
 }
 

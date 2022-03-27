@@ -19,7 +19,9 @@ export type ButtonProps = {
   className?: string
   outline?: boolean
   hover?: object
-  focus?: object
+  size: "small" | "medium" | "large" | number | string
+  focus?: object,
+  fontSize: "small" | "medium" | 'large' | number | string
   onClick: MouseEventHandler
 }
 
@@ -30,7 +32,9 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
   className,
   outline,
   hover,
+  size,
   focus,
+  fontSize,
   onClick,
   children
 }) => {
@@ -43,6 +47,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
     return (
       <button
         disabled
+      style={{height: size, width: size}}
         className={`${styles.Recompo_Button} ${cls} ${
           className ? className : ""
         } ${hover ? hover : ""} ${focus ? focus : ""}`}
@@ -60,7 +65,8 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
               return
             }
       }
-        className={`${styles.Recompo_Button} ${cls} ${
+      style={{height: size, width: size, fontSize: fontSize ? fontSize : 'auto' }}
+      className={`${styles.Recompo_Button} ${cls} ${
           className ? className : ""
         } `}
       >

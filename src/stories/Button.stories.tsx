@@ -90,7 +90,8 @@ ButtonOutlineSuccess.args = {
 ButtonOutlineError.args = {
   variant: "error",
   children: "error outline",
-  outline: true
+  outline: true,
+  size: '100px'
 }
 
 ButtonOutlineInfo.args = {
