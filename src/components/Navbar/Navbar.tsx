@@ -3,7 +3,7 @@ import React from "react"
 import { FC, PropsWithChildren, useState } from "react"
 import styles from "./Navbar.module.scss"
 import { Property } from "csstype"
-import { AvatarProps } from '../Avatar/Avatar'
+import { AvatarProps } from "../Avatar/Avatar"
 import Avatar from "../Avatar"
 import Typography from "../Typography"
 // Required for props
@@ -88,9 +88,10 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
       borderBottom: border
         ? `2px solid ${borderColor ? borderColor : "#e5e7eb"}`
         : "",
-      boxShadow: shadow ? 
-        "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)" : '',
-        marginTop: rounded ? '3vh' : 0
+      boxShadow: shadow
+        ? "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+        : "",
+      marginTop: rounded ? "3vh" : 0
     }
   }
   return (
