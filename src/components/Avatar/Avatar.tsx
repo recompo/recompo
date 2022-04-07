@@ -5,9 +5,6 @@ import { FC } from "react"
 import styles from "./Avatar.module.scss"
 import {Properties} from 'csstype'
 // Props needed
-export interface Style {
-  avatar: Properties
-}
 export interface AvatarProps {
   // Required
   src: string
@@ -19,7 +16,8 @@ export interface AvatarProps {
   width?: number | string
   radius?: number | string
   className?: string
-  style? : Style
+  style? : Properties
+  color?: string
 }
 
 const Avatar: FC<AvatarProps> = ({
@@ -33,11 +31,13 @@ const Avatar: FC<AvatarProps> = ({
   width,
   radius,
   className,
-  style
+  style,
+  color
 }) => {
   const styles = {
     style: {
       borderRadius: radius ? radius : `${variant === 'circular' ? '50%' : `${variant === 'rounded' ? '2rem' : 0}`}`,
+      color,
       style
     }
   }

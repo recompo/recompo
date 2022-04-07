@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren } from "react"
 import styles from "./Typography.module.scss"
-import { Property } from "csstype"
+import { Properties, Property } from "csstype"
 import { useTheme } from "../../theme"
 
 export interface TypographyProps {
@@ -11,6 +11,8 @@ export interface TypographyProps {
   fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
   className?: string
   href?: string
+  onClick?: React.MouseEventHandler
+  style?: Properties
 }
 
 const Typography: FC<PropsWithChildren<TypographyProps>> = ({
@@ -21,19 +23,25 @@ const Typography: FC<PropsWithChildren<TypographyProps>> = ({
   font,
   fontWeight,
   className,
-  href
+  href,
+  onClick,
+  style
 }) => {
+
   const textProps = {
     style: {
       textAlign: align ? align : 'start',
+      alignItems: align ? align : '',
       color: color ? color : 'black',
       fontFamily: font
         ? font
         : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
       fontWeight: fontWeight,
-      textDecoration: 'none'
+      textDecoration: 'none',
+      style
     },
-    className: className
+    className: className,
+    onClick
   }
   if (variant === "h1") return <h1 {...textProps}>{children}</h1>
   else if (variant === "h2") return <h2 {...textProps}>{children}</h2>
