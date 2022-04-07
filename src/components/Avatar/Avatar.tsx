@@ -1,9 +1,6 @@
 // Import React
 import React from "react"
 import { FC } from "react"
-// Import Styles
-import styles from "./Avatar.module.scss"
-import { Properties } from "csstype"
 // Props needed
 export interface AvatarProps {
   // Required
@@ -30,8 +27,7 @@ const Avatar: FC<AvatarProps> = ({
   width,
   radius,
   className,
-  style,
-  color
+  style
 }) => {
   const styles = {
     style: {

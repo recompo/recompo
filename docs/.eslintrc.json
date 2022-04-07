@@ -4,10 +4,10 @@
     "next/core-web-vitals",
     "plugin:mdx/recommended"
   ],
-  "ecmaFeatures": {
-    "modules": true
-  },
   "parserOptions": {
     "ecmaVersion": 13
+  },
+  "rules": {
+    "react/no-unescaped-entities": "off"
   }
 }

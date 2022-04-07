@@ -49,7 +49,6 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
   // Required
   logo,
   // Optional
-  accent,
   background,
   color,
   children,
@@ -68,8 +67,6 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
   const [menu, setMenu] = useState(false)
   // Callbacks
   const toggleMenu = () => setMenu(!menu)
-  const closeMenu = () => setMenu(false)
-  const accentColor = accent ? accent : color
   const pos = position ? position : "fixed"
   const navStyles = {
     style: {
@@ -105,7 +102,7 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
                 : "50%"
             }
             src={logo && logo.avatar && logo.avatar?.src}
-            style={{marginTop : '35px'}}
+            style={{ marginTop: "35px" }}
             alt={
               logo && logo.avatar && logo.avatar?.alt
                 ? logo.avatar.alt

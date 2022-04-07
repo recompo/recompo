@@ -1,12 +1,15 @@
-import React from "react"
+import React, { PropsWithChildren } from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 // import AvatarDropdown from "../components/AvatarDropdown";
 import { AvatarDropdown } from "../"
+import { AvatarDropdownProps } from "../components/AvatarDropdown/AvatarDropdown"
 
 const Template: ComponentStory<typeof AvatarDropdown> = ({
   children,
   ...args
-}) => <AvatarDropdown {...args}>{children}</AvatarDropdown>
+}: PropsWithChildren<AvatarDropdownProps>) => (
+  <AvatarDropdown {...args}>{children}</AvatarDropdown>
+)
 
 export default {
   title: "AvatarDropdown",

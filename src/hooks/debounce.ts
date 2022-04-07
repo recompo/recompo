@@ -1,6 +1,5 @@
-import { useCallback, useEffect } from "react"
+import { useEffect } from "react"
 import debounce from "utils/debounce"
-import useTimeout from "./timeout"
 
 const useDebounce = (
   effect: React.EffectCallback,

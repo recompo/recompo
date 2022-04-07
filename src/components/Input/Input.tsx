@@ -1,5 +1,5 @@
 import React from "react"
-import { FC, PropsWithChildren } from "react"
+import { FC } from "react"
 import styles from "./Input.module.scss"
 export type InputProps = {
   label?: string
@@ -7,7 +7,7 @@ export type InputProps = {
   borderRadius?: "xs" | "sm" | "md" | "lg" | "xl"
   placeHolder?: string
   value?: string
-  onChange?: any
+  onChange?: React.ChangeEventHandler<HTMLInputElement>
   name: string
 }
 

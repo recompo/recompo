@@ -1,11 +1,9 @@
 import React, { FC, PropsWithChildren } from "react"
-import styles from "./Typography.module.scss"
 import { Properties, Property } from "csstype"
-import { useTheme } from "../../theme"
 
 export interface TypographyProps {
   color?: string
-  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "li" | 'a' |"p"
+  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "li" | "a" | "p"
   align?: Property.TextAlign
   font?: string
   fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
@@ -27,17 +25,16 @@ const Typography: FC<PropsWithChildren<TypographyProps>> = ({
   onClick,
   style
 }) => {
-
   const textProps = {
     style: {
-      textAlign: align ? align : 'start',
-      alignItems: align ? align : '',
-      color: color ? color : 'black',
+      textAlign: align ? align : "start",
+      alignItems: align ? align : "",
+      color: color ? color : "black",
       fontFamily: font
         ? font
         : "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
       fontWeight: fontWeight,
-      textDecoration: 'none',
+      textDecoration: "none",
       style
     },
     className: className,
@@ -50,7 +47,12 @@ const Typography: FC<PropsWithChildren<TypographyProps>> = ({
   else if (variant === "h5") return <h5 {...textProps}>{children}</h5>
   else if (variant === "h6") return <h6 {...textProps}>{children}</h6>
   else if (variant === "li") return <li {...textProps}>{children}</li>
-  else if (variant === "a") return <a href={`${href ? href : '/'}`} {...textProps}>{children}</a>
+  else if (variant === "a")
+    return (
+      <a href={`${href ? href : "/"}`} {...textProps}>
+        {children}
+      </a>
+    )
   else return <p {...textProps}>{children}</p>
 }
 
