@@ -37,7 +37,7 @@ const Avatar: FC<AvatarProps> = ({
 }) => {
   const styles = {
     style: {
-      borderRadius: radius ? radius : "2rem",
+      borderRadius: radius ? radius : `${variant === 'circular' ? '50%' : `${variant === 'rounded' ? '2rem' : 0}`}`,
       style
     }
   }
@@ -73,13 +73,13 @@ const Avatar: FC<AvatarProps> = ({
   else {
     return (
       <img
-        src={src}
-        className={className ? className : ''}
-        alt={alt ? alt : "loading"}
-        height={size ? size : height || height ? height : 250}
-        width={size ? size : width || width ? width : 250}
-        {...styles}
-      />
+      src={src}
+      className={className}
+      alt={alt ? alt : "loading"}
+      height={size ? size : height || height ? height : 250}
+      width={size ? size : width || width ? width : 250}
+      {...styles}
+    />
     )
   }
 }
