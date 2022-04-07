@@ -3,7 +3,7 @@ import React from "react"
 import { FC } from "react"
 // Import Styles
 import styles from "./Avatar.module.scss"
-import {Properties} from 'csstype'
+import { Properties } from "csstype"
 // Props needed
 export interface AvatarProps {
   // Required
@@ -16,8 +16,7 @@ export interface AvatarProps {
   width?: number | string
   radius?: number | string
   className?: string
-  style? : Properties
-  color?: string
+  style?: React.CSSProperties
 }
 
 const Avatar: FC<AvatarProps> = ({
@@ -36,8 +35,13 @@ const Avatar: FC<AvatarProps> = ({
 }) => {
   const styles = {
     style: {
-      borderRadius: radius ? radius : `${variant === 'circular' ? '50%' : `${variant === 'rounded' ? '2rem' : 0}`}`,
-      color,
+      borderRadius: radius
+        ? radius
+        : `${
+            variant === "circular"
+              ? "50%"
+              : `${variant === "rounded" ? "2rem" : 0}`
+          }`,
       style
     }
   }
@@ -52,7 +56,7 @@ const Avatar: FC<AvatarProps> = ({
         // if size is provided then it would be size or else it will be height
         height={size ? size : height || height ? height : 250}
         // if size is provided then it would be size or else it would be width
-        width={size ? size : width || width ? width : 250}
+        width={(size ? size : width) || (width ? width : 250)}
         // if radius is provided then it would be radius or else it would be the number provided
         {...styles}
       />
@@ -73,13 +77,13 @@ const Avatar: FC<AvatarProps> = ({
   else {
     return (
       <img
-      src={src}
-      className={className}
-      alt={alt ? alt : "loading"}
-      height={size ? size : height || height ? height : 250}
-      width={size ? size : width || width ? width : 250}
-      {...styles}
-    />
+        src={src}
+        className={className}
+        alt={alt ? alt : "loading"}
+        height={size ? size : height || height ? height : 250}
+        width={size ? size : width || width ? width : 250}
+        {...styles}
+      />
     )
   }
 }
