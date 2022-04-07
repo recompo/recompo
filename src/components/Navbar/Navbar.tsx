@@ -105,11 +105,7 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
                 : "50%"
             }
             src={logo && logo.avatar && logo.avatar?.src}
-            style={{
-              avatar: {
-                marginTop: "35px"
-              }
-            }}
+            style={{marginTop : '35px'}}
             alt={
               logo && logo.avatar && logo.avatar?.alt
                 ? logo.avatar.alt
