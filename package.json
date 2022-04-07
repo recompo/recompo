@@ -13,7 +13,7 @@
     "build": "webpack --mode production && node scripts/declarations.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "",
+    "test": "echo \"no tests\"",
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

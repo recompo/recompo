@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import debounce from "utils/debounce"
+import debounce from "../utils/debounce"
 
 const useDebounce = (
   effect: React.EffectCallback,
