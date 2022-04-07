@@ -81,10 +81,10 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
       color: color ? color : "black",
       margin: rounded ? `${margin ? margin : 0}` : 0,
       width: rounded ? "98%" : "100vw",
-      justifyContent: logo.align ? logo.align : "start",
+      justifyContent: logo && logo.align ? logo.align : "start",
       backdropFilter: variant === "glassy" ? `blur(16px)` : "",
-      gap: logo.gap ? logo.gap : 0,
-      paddingLeft: logo.left ? logo.left : 20,
+      gap: logo && logo.gap ? logo.gap : 0,
+      paddingLeft: logo && logo.left ? logo.left : 20,
       borderBottom: border
         ? `2px solid ${borderColor ? borderColor : "#e5e7eb"}`
         : "",
@@ -97,17 +97,27 @@ const Navbar: FC<PropsWithChildren<NavbarProps>> = ({
   return (
     <>
       <nav className={styles.navbar} {...navStyles}>
-        <div style={{ justifyContent: logo?.align }}>
+        <div style={{ justifyContent: logo && logo.align ? logo.align : "" }}>
           <Avatar
-            radius={logo.avatar?.radius ? logo.avatar.radius : "50%"}
-            src={logo.avatar?.src}
+            radius={
+              logo && logo.avatar && logo.avatar?.radius
+                ? logo.avatar.radius
+                : "50%"
+            }
+            src={logo && logo.avatar && logo.avatar?.src}
             style={{
               avatar: {
                 marginTop: "35px"
               }
             }}
-            alt={logo.avatar?.alt ? logo.avatar.alt : "loading..."}
-            size={logo.avatar?.size ? logo.avatar.size : 50}
+            alt={
+              logo && logo.avatar && logo.avatar?.alt
+                ? logo.avatar.alt
+                : "loading..."
+            }
+            size={
+              logo && logo.avatar && logo.avatar?.size ? logo.avatar.size : 50
+            }
           />
         </div>
         {links ? (

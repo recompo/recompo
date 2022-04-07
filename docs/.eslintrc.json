@@ -1,4 +1,13 @@
 {
   "root": true,
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:mdx/recommended"
+  ],
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 13
+  }
 }

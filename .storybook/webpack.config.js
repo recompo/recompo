@@ -1,5 +1,4 @@
 const path = require("path")
-const glob = require("glob")
 
 /**
  * @param {{config:import('webpack').Configuration,mode:String}} config
