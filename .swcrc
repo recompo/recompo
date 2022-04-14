@@ -6,10 +6,6 @@
       "tsx": true
     },
     "target": "es5",
-    "baseUrl": "src",
-    "paths": {
-      "theme/*": ["theme/*"],
-      "components/*": ["components/*"]
-    }
+    "baseUrl": "src"
   }
 }

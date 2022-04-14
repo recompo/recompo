@@ -1,0 +1,38 @@
+---
+title: Typography
+---
+
+import Typography from "recompo/Typography"
+
+### Description
+
+Typography is an important features for a website, our typography component is very customizable and is easy to use.
+
+### Available Props
+
+- Optional
+  - color &rarr; `string`
+  - variant &rarr; `h1` `h2` `h3` `h4` `h5` `h6` `p`
+  - align(Text Align) &rarr; `string`
+  - font &rarr; `string`
+  - fontWeight &rarr; `100` `200` `300` `400` `500` `600` `700` `800` `900`
+
+### Usage
+
+```js
+import { Typography } from "recompo"
+// OR
+import Typography from "recompo/Typography"
+
+return (
+  <>
+    <Typography variant="h1" align="center" color="yellow" fontWeight="500">
+      Hello World
+    </Typography>
+  </>
+)
+```
+
+<Typography variant="h1" align="center" color="yellow" fontWeight="500">
+  Hello World
+</Typography>

@@ -1,20 +1,16 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "React Library",
+  "extends": "./base.json",
   "compilerOptions": {
-    "declaration": true,
-    "module": "esnext",
-    "target": "es5",
     "lib": [
       "esnext",
       "dom",
       "dom.iterable"
     ],
-    "sourceMap": true,
-    "jsx": "react",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "outDir": "dist",
-    "emitDeclarationOnly": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react"
   },
   "include": [
     "src/**/*",
@@ -23,7 +19,7 @@
   ],
   "exclude": [
     "node_modules",
-    "build",
+    "dist",
     "src/stories/**/*.tsx",
     "src/__tests__/**/*.test.tsx",
     "src/hooks/*.ts"

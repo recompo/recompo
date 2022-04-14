@@ -1,4 +1,4 @@
-name: Test and lint code
+name: Build, test, lint
 on: [push, pull_request]
 jobs:
   check:
@@ -8,22 +8,31 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "16"
+      - run: yarn set version berry
       - name: Install
         run: |
           yarn install
-          cd docs && yarn install && cd -
+          for pkg in $(ls packages); do
+            cd packages/$pkg 
+            yarn install
+            cd -
+          done
+
+          for pkg in $(ls apps); do
+            cd apps/$pkg 
+            yarn install
+            cd -
+          done
+
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
       - name: Lint
         run: yarn lint
 
       - name: Build
         run: yarn build
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
       - name: Test
         run: yarn test
-      - name: Create checks
-        uses: LouisBrunner/checks-action@v1.1.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: Test and lint code
-          conclusion: ${{ job.status }}
-          output: |
-            {"summary":"${{ job.status }}"}

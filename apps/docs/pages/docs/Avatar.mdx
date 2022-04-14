@@ -1,0 +1,48 @@
+---
+title: Avatar
+---
+
+import { Avatar } from "recompo"
+
+### Description
+
+Avatar component lets you manage your avatar in a powerful and unique ways
+
+### Available Props
+
+- Required
+
+  - src &rarr; `string`
+  - size &rarr; `string`
+
+- Optional
+  - variant &rarr; `circular` `rounded` `square` default set to circular
+  - alt &rarr; `string`
+
+### Usage
+
+```js
+import { Avatar } from "recompo"
+// OR
+import Avatar from "recompo/Avatar"
+
+return (
+  <>
+    <Avatar
+      src="https://recompo.js.org/"
+      alt="logo"
+      size="100px"
+      variant="rounded"
+    >
+      Hello World
+    </Avatar>
+  </>
+)
+```
+
+<Avatar
+  src="https://res.cloudinary.com/woodhouse-vercel-app/image/upload/v1647944870/recompo/logo-dark_pw5gv1.png"
+  alt="logo"
+  size="150px"
+  variant="rounded"
+/>
