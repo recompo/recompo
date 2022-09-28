@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import throttle from "utils/throttle"
+import throttle from "@recompo-utils/debounce"
 
 const useThrottle = (
   effect: React.EffectCallback,

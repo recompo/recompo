@@ -1,5 +1,5 @@
 {
-  "name": "config",
+  "name": "@recompo/config",
   "version": "0.0.0",
   "main": "index.js",
   "private": true,

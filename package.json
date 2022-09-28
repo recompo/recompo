@@ -24,5 +24,8 @@
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "prettier": "^2.5.1",
     "turbo": "*"
+  },
+  "dependencies": {
+    "husky": "^8.0.1"
   }
 }

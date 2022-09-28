@@ -1,6 +1,6 @@
 /**@type {import('webpack').Configuration} */
 const glob = require("glob")
-const config = require("config/webpack-preset")
+const config = require("@recompo/config/webpack-preset")
 
 config.entry = glob
   .sync("./src/**/*[!.test,.stories].{ts,tsx}")
